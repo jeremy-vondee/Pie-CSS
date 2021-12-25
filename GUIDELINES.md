@@ -2,6 +2,14 @@
 
 ## Scripts
 
+### `yarn watch`
+
+Starts the file watcher.
+
+### `yarn build`
+
+Builds all SASS files.
+
 ## Respository
 
 ### Branches
