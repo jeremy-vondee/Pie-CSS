@@ -53,7 +53,7 @@ File formatting is expected to follow the configuration specified in the `.edito
 
 - ### `src/components`
 
-**Component folder names must begin with a capital letter.**<br>
+**Component folder names must begin with a capital letter. A component's folder should always contain an `index.scss` file for its own styles.**<br>
 
 This folder contains all components, grouped according to styles of their subcomponents as well as their own styles. So, the structure below would be for a card component:
 
