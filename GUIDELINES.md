@@ -1,6 +1,8 @@
 # Pie-CSS: Guidelines
 
-## Branches
+## Respository
+
+### Branches
 
 Branches should be created for new styles in the following manner:
 
@@ -9,6 +11,12 @@ Branches should be created for new styles in the following manner:
 - `spacing/padding` for padding styles.
 - `color/colors` for color styles.
 - `color/backgrounds` for background styles.
+- `update/readme` for updating the README file.
+- `update/guidelines` for updating the GUIDELINES file.
+
+### Pull Requests
+
+Pull requests should be created when changes from other branches need to be merged into the `main` branch.
 
 ## File Naming
 
