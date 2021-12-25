@@ -4,6 +4,7 @@
 
 ### Branches
 
+**Local branches must be updated by pulling from the `main` branch first before adding changes.**<br><br>
 Branches should be created for new styles in the following manner:
 
 - `component/<component-name>` for component styles.
