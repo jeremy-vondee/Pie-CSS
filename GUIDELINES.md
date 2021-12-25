@@ -1,4 +1,4 @@
-# Pie-CSS: Guidelines
+# Pie-CSS: Contribution Guidelines
 
 ## Respository
 
@@ -20,7 +20,7 @@ Pull requests should be created when changes from other branches need to be merg
 
 ## File Naming
 
-File names are expected to be **kebab cased** like `some-component.scss`.
+File names are expected to be **kebab cased** for a much cleaner look. For example: `some-component.scss`.
 
 ## Source Files
 
