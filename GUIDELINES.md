@@ -1,5 +1,15 @@
 # Pie-CSS: Guidelines
 
+## Branches
+
+Branches should be created for new styles in the following manner:
+
+- `component/<component-name>` for component styles.
+- `spacing/margin` for margin styles.
+- `spacing/padding` for padding styles.
+- `color/colors` for color styles.
+- `color/backgrounds` for background styles.
+
 ## File Naming
 
 File names are expected to be **kebab cased** like `some-component.scss`.
