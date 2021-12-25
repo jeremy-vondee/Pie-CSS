@@ -17,7 +17,7 @@ Builds all SASS files.
 **Local branches must be updated by pulling from the `main` branch first before adding changes.**<br><br>
 Branches should be created for new styles in the following manner:
 
-- `component/<component-name>` for component styles.
+- `component/<component-name-in-lowercase>` for component styles.
 - `spacing/margin` for margin styles.
 - `spacing/padding` for padding styles.
 - `color/colors` for color styles.
