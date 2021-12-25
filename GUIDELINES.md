@@ -12,6 +12,10 @@ Builds all SASS files.
 
 ## Respository
 
+## Style Naming
+
+Styles should be named according to the name of the component or subcomponent to which they belong. For example the class `.grid-container` belongs to a subcomponent of the file `grid-container.scss` in the `Grid` component.
+
 ### Branches
 
 **Local branches must be updated by pulling from the `main` branch first before adding changes.**<br><br>
@@ -51,7 +55,7 @@ File formatting is expected to follow the configuration specified in the `.edito
 
 **Component folder names must begin with a capital letter.**<br>
 
-This folder contains all components, grouped according to their styles. So, the structure below would be for a card component:
+This folder contains all components, grouped according to styles of their subcomponents as well as their own styles. So, the structure below would be for a card component:
 
 `src`<br>
 |<br>
