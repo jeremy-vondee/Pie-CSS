@@ -2,186 +2,186 @@
 
 html body .m-xs,
 html body .margin-xs {
-	margin: $sz-xs;
+	margin: var(--sz-xs);
 }
 
 html body .m-top-bottom-xs,
 html body .margin-top-bottom-xs {
-	margin-top: $sz-xs;
-	margin-bottom: $sz-xs;
+	margin-top: var(--sz-xs);
+	margin-bottom: var(--sz-xs);
 }
 
 html body .m-left-right-xs,
 html body .margin-left-right-xs {
-	margin-left: $sz-xs;
-	margin-right: $sz-xs;
+	margin-left: var(--sz-xs);
+	margin-right: var(--sz-xs);
 }
 
 html body .m-top-xs,
 html body .margin-top-xs {
-	margin-top: $sz-xs;
+	margin-top: var(--sz-xs);
 }
 
 html body .m-left-xs,
 html body .margin-left-xs {
-	margin-left: $sz-xs;
+	margin-left: var(--sz-xs);
 }
 
 html body .m-right-xs,
 html body .margin-right-xs {
-	margin-right: $sz-xs;
+	margin-right: var(--sz-xs);
 }
 html body .m-bottom-xs,
 html body .margin-bottom-xs {
-	margin-bottom: $sz-xs;
+	margin-bottom: var(--sz-xs);
 }
 
 html body .m-sm,
 html body .margin-sm {
-	margin: $sz-sm;
+	margin: var(--sz-sm);
 }
 
 html body .m-top-bottom-sm,
 html body .margin-top-bottom-sm {
-	margin-top: $sz-sm;
-	margin-bottom: $sz-sm;
+	margin-top: var(--sz-sm);
+	margin-bottom: var(--sz-sm);
 }
 
 html body .m-left-right-sm,
 html body .margin-left-right-sm {
-	margin-left: $sz-sm;
-	margin-right: $sz-sm;
+	margin-left: var(--sz-sm);
+	margin-right: var(--sz-sm);
 }
 
 html body .m-top-sm,
 html body .margin-top-sm {
-	margin-top: $sz-sm;
+	margin-top: var(--sz-sm);
 }
 
 html body .m-left-sm,
 html body .margin-left-sm {
-	margin-left: $sz-sm;
+	margin-left: var(--sz-sm);
 }
 
 html body .m-right-sm,
 html body .margin-right-sm {
-	margin-right: $sz-sm;
+	margin-right: var(--sz-sm);
 }
 
 html body .m-bottom-sm,
 html body .margin-bottom-sm {
-	margin-bottom: $sz-sm;
+	margin-bottom: var(--sz-sm);
 }
 
 html body .m-md,
 html body .margin-md {
-	margin: $sz-md;
+	margin: var(--sz-md);
 }
 
 html body .m-top-bottom-md,
 html body .margin-top-bottom-md {
-	margin-top: $sz-md;
-	margin-bottom: $sz-md;
+	margin-top: var(--sz-md);
+	margin-bottom: var(--sz-md);
 }
 
 html body .m-left-right-md,
 html body .margin-left-right-md {
-	margin-left: $sz-md;
-	margin-right: $sz-md;
+	margin-left: var(--sz-md);
+	margin-right: var(--sz-md);
 }
 
 html body .m-top-md,
 html body .margin-top-md {
-	margin-top: $sz-md;
+	margin-top: var(--sz-md);
 }
 
 html body .m-left-md,
 html body .margin-left-md {
-	margin-left: $sz-md;
+	margin-left: var(--sz-md);
 }
 
 html body .m-right-md,
 html body .margin-right-md {
-	margin-right: $sz-md;
+	margin-right: var(--sz-md);
 }
 
 html body .m-bottom-md,
 html body .margin-bottom-md {
-	margin-bottom: $sz-md;
+	margin-bottom: var(--sz-md);
 }
 
 html body .m-lg,
 html body .margin-lg {
-	margin: $sz-lg;
+	margin: var(--sz-lg);
 }
 
 html body .m-top-bottom-lg,
 html body .margin-top-bottom-lg {
-	margin-top: $sz-lg;
-	margin-bottom: $sz-lg;
+	margin-top: var(--sz-lg);
+	margin-bottom: var(--sz-lg);
 }
 
 html body .m-left-right-lg,
 html body .margin-left-right-lg {
-	margin-left: $sz-lg;
-	margin-right: $sz-lg;
+	margin-left: var(--sz-lg);
+	margin-right: var(--sz-lg);
 }
 
 html body .m-top-lg,
 html body .margin-top-lg {
-	margin-top: $sz-lg;
+	margin-top: var(--sz-lg);
 }
 
 html body .m-left-lg,
 html body .margin-left-lg {
-	margin-left: $sz-lg;
+	margin-left: var(--sz-lg);
 }
 
 html body .m-right-lg,
 html body .margin-right-lg {
-	margin-right: $sz-lg;
+	margin-right: var(--sz-lg);
 }
 
 html body .m-bottom-lg,
 html body .margin-bottom-lg {
-	margin-bottom: $sz-lg;
+	margin-bottom: var(--sz-lg);
 }
 
 html body .m-xlg,
 html body .margin-xlg {
-	margin: $sz-xlg;
+	margin: var(--sz-xlg);
 }
 
 html body .m-top-bottom-xlg,
 html body .margin-top-bottom-xlg {
-	margin-top: $sz-xlg;
-	margin-bottom: $sz-xlg;
+	margin-top: var(--sz-xlg);
+	margin-bottom: var(--sz-xlg);
 }
 
 html body .m-left-right-xlg,
 html body .margin-left-right-xlg {
-	margin-left: $sz-xlg;
-	margin-right: $sz-xlg;
+	margin-left: var(--sz-xlg);
+	margin-right: var(--sz-xlg);
 }
 
 html body .m-top-xlg,
 html body .margin-top-xlg {
-	margin-top: $sz-xlg;
+	margin-top: var(--sz-xlg);
 }
 
 html body .m-left-xlg,
 html body .margin-left-xlg {
-	margin-left: $sz-xlg;
+	margin-left: var(--sz-xlg);
 }
 
 html body .m-right-xlg,
 html body .margin-right-xlg {
-	margin-right: $sz-xlg;
+	margin-right: var(--sz-xlg);
 }
 
 html body .m-bottom-xlg,
 html body .margin-bottom-xlg {
-	margin-bottom: $sz-xlg;
+	margin-bottom: var(--sz-xlg);
 }
 
 /* Screen extra-small */
@@ -193,127 +193,127 @@ html body .margin-bottom-xlg {
 
 	html body .m-xs-screen-xs,
 	html body .margin-xs-screen-xs {
-		margin: $sz-xs;
+		margin: var(--sz-xs);
 	}
 
 	html body .m-top-xs-screen-xs,
 	html body .margin-top-xs-screen-xs {
-		margin-top: $sz-xs;
+		margin-top: var(--sz-xs);
 	}
 
 	html body .m-left-xs-screen-xs,
 	html body .margin-left-xs-screen-xs {
-		margin-left: $sz-xs;
+		margin-left: var(--sz-xs);
 	}
 
 	html body .m-right-xs-screen-xs,
 	html body .margin-right-xs-screen-xs {
-		margin-right: $sz-xs;
+		margin-right: var(--sz-xs);
 	}
 
 	html body .m-bottom-xs-screen-xs,
 	html body .margin-bottom-xs-screen-xs {
-		margin-bottom: $sz-xs;
+		margin-bottom: var(--sz-xs);
 	}
 
 	html body .m-sm-screen-xs,
 	html body .margin-sm-screen-xs {
-		margin: $sz-sm;
+		margin: var(--sz-sm);
 	}
 
 	html body .m-top-sm-screen-xs,
 	html body .margin-top-sm-screen-xs {
-		margin-top: $sz-sm;
+		margin-top: var(--sz-sm);
 	}
 
 	html body .m-left-sm-screen-xs,
 	html body .margin-left-sm-screen-xs {
-		margin-left: $sz-sm;
+		margin-left: var(--sz-sm);
 	}
 
 	html body .m-right-sm-screen-xs,
 	html body .margin-right-sm-screen-xs {
-		margin-right: $sz-sm;
+		margin-right: var(--sz-sm);
 	}
 
 	html body .m-bottom-sm-screen-xs,
 	html body .margin-bottom-sm-screen-xs {
-		margin-bottom: $sz-sm;
+		margin-bottom: var(--sz-sm);
 	}
 
 	html body .m-md-screen-xs,
 	html body .margin-md-screen-xs {
-		margin: $sz-md;
+		margin: var(--sz-md);
 	}
 
 	html body .m-top-md-screen-xs,
 	html body .margin-top-md-screen-xs {
-		margin-top: $sz-md;
+		margin-top: var(--sz-md);
 	}
 
 	html body .m-left-md-screen-xs,
 	html body .margin-left-md-screen-xs {
-		margin-left: $sz-md;
+		margin-left: var(--sz-md);
 	}
 
 	html body .m-right-md-screen-xs,
 	html body .margin-right-md-screen-xs {
-		margin-right: $sz-md;
+		margin-right: var(--sz-md);
 	}
 
 	html body .m-bottom-md-screen-xs,
 	html body .margin-bottom-md-screen-xs {
-		margin-bottom: $sz-md;
+		margin-bottom: var(--sz-md);
 	}
 
 	html body .m-lg-screen-xs,
 	html body .margin-lg-screen-xs {
-		margin: $sz-lg;
+		margin: var(--sz-lg);
 	}
 
 	html body .m-top-lg-screen-xs,
 	html body .margin-top-lg-screen-xs {
-		margin-top: $sz-lg;
+		margin-top: var(--sz-lg);
 	}
 
 	html body .m-left-lg-screen-xs,
 	html body .margin-left-lg-screen-xs {
-		margin-left: $sz-lg;
+		margin-left: var(--sz-lg);
 	}
 
 	html body .m-right-lg-screen-xs,
 	html body .margin-right-lg-screen-xs {
-		margin-right: $sz-lg;
+		margin-right: var(--sz-lg);
 	}
 
 	html body .m-bottom-lg-screen-xs,
 	html body .margin-bottom-lg-screen-xs {
-		margin-bottom: $sz-lg;
+		margin-bottom: var(--sz-lg);
 	}
 
 	html body .m-xlg-screen-xs,
 	html body .margin-xlg-screen-xs {
-		margin: $sz-xlg;
+		margin: var(--sz-xlg);
 	}
 
 	html body .m-top-xlg-screen-xs,
 	html body .margin-top-xlg-screen-xs {
-		margin-top: $sz-xlg;
+		margin-top: var(--sz-xlg);
 	}
 
 	html body .m-left-xlg-screen-xs,
 	html body .margin-left-xlg-screen-xs {
-		margin-left: $sz-xlg;
+		margin-left: var(--sz-xlg);
 	}
 
 	html body .m-right-xlg-screen-xs,
 	html body .margin-right-xlg-screen-xs {
-		margin-right: $sz-xlg;
+		margin-right: var(--sz-xlg);
 	}
 
 	html body .m-bottom-xlg-screen-xs,
 	html body .margin-bottom-xlg-screen-xs {
-		margin-bottom: $sz-xlg;
+		margin-bottom: var(--sz-xlg);
 	}
 }
 
@@ -321,127 +321,127 @@ html body .margin-bottom-xlg {
 @media screen and (min-width: 321px) and (max-width: 600px) {
 	html body .m-xs-screen-sm,
 	html body .margin-xs-screen-sm {
-		margin: $sz-xs;
+		margin: var(--sz-xs);
 	}
 
 	html body .m-top-xs-screen-sm,
 	html body .margin-top-xs-screen-sm {
-		margin-top: $sz-xs;
+		margin-top: var(--sz-xs);
 	}
 
 	html body .m-left-xs-screen-sm,
 	html body .margin-left-xs-screen-sm {
-		margin-left: $sz-xs;
+		margin-left: var(--sz-xs);
 	}
 
 	html body .m-right-xs-screen-sm,
 	html body .margin-right-xs-screen-sm {
-		margin-right: $sz-xs;
+		margin-right: var(--sz-xs);
 	}
 
 	html body .m-bottom-xs-screen-sm,
 	html body .margin-bottom-xs-screen-sm {
-		margin-bottom: $sz-xs;
+		margin-bottom: var(--sz-xs);
 	}
 
 	html body .m-sm-screen-sm,
 	html body .margin-sm-screen-sm {
-		margin: $sz-sm;
+		margin: var(--sz-sm);
 	}
 
 	html body .m-top-sm-screen-sm,
 	html body .margin-top-sm-screen-sm {
-		margin-top: $sz-sm;
+		margin-top: var(--sz-sm);
 	}
 
 	html body .m-left-sm-screen-sm,
 	html body .margin-left-sm-screen-sm {
-		margin-left: $sz-sm;
+		margin-left: var(--sz-sm);
 	}
 
 	html body .m-right-sm-screen-sm,
 	html body .margin-right-sm-screen-sm {
-		margin-right: $sz-sm;
+		margin-right: var(--sz-sm);
 	}
 
 	html body .m-bottom-sm-screen-sm,
 	html body .margin-bottom-sm-screen-sm {
-		margin-bottom: $sz-sm;
+		margin-bottom: var(--sz-sm);
 	}
 
 	html body .m-md-screen-sm,
 	html body .margin-md-screen-sm {
-		margin: $sz-md;
+		margin: var(--sz-md);
 	}
 
 	html body .m-top-md-screen-sm,
 	html body .margin-top-md-screen-sm {
-		margin-top: $sz-md;
+		margin-top: var(--sz-md);
 	}
 
 	html body .m-left-md-screen-sm,
 	html body .margin-left-md-screen-sm {
-		margin-left: $sz-md;
+		margin-left: var(--sz-md);
 	}
 
 	html body .m-right-md-screen-sm,
 	html body .margin-right-md-screen-sm {
-		margin-right: $sz-md;
+		margin-right: var(--sz-md);
 	}
 
 	html body .m-bottom-md-screen-sm,
 	html body .margin-bottom-md-screen-sm {
-		margin-bottom: $sz-md;
+		margin-bottom: var(--sz-md);
 	}
 
 	html body .m-lg-screen-sm,
 	html body .margin-lg-screen-sm {
-		margin: $sz-lg;
+		margin: var(--sz-lg);
 	}
 
 	html body .m-top-lg-screen-sm,
 	html body .margin-top-lg-screen-sm {
-		margin-top: $sz-lg;
+		margin-top: var(--sz-lg);
 	}
 
 	html body .m-left-lg-screen-sm,
 	html body .margin-left-lg-screen-sm {
-		margin-left: $sz-lg;
+		margin-left: var(--sz-lg);
 	}
 
 	html body .m-right-lg-screen-sm,
 	html body .margin-right-lg-screen-sm {
-		margin-right: $sz-lg;
+		margin-right: var(--sz-lg);
 	}
 
 	html body .m-bottom-lg-screen-sm,
 	html body .margin-bottom-lg-screen-sm {
-		margin-bottom: $sz-lg;
+		margin-bottom: var(--sz-lg);
 	}
 
 	html body .m-xlg-screen-sm,
 	html body .margin-xlg-screen-sm {
-		margin: $sz-xlg;
+		margin: var(--sz-xlg);
 	}
 
 	html body .m-top-xlg-screen-sm,
 	html body .margin-top-xlg-screen-sm {
-		margin-top: $sz-xlg;
+		margin-top: var(--sz-xlg);
 	}
 
 	html body .m-left-xlg-screen-sm,
 	html body .margin-left-xlg-screen-sm {
-		margin-left: $sz-xlg;
+		margin-left: var(--sz-xlg);
 	}
 
 	html body .m-right-xlg-screen-sm,
 	html body .margin-right-xlg-screen-sm {
-		margin-right: $sz-xlg;
+		margin-right: var(--sz-xlg);
 	}
 
 	html body .m-bottom-xlg-screen-sm,
 	html body .margin-bottom-xlg-screen-sm {
-		margin-bottom: $sz-xlg;
+		margin-bottom: var(--sz-xlg);
 	}
 }
 
@@ -454,126 +454,126 @@ html body .margin-bottom-xlg {
 
 	html body .m-xs-screen-md,
 	html body .margin-xs-screen-md {
-		margin: $sz-xs;
+		margin: var(--sz-xs);
 	}
 
 	html body .m-top-xs-screen-md,
 	html body .margin-top-xs-screen-md {
-		margin-top: $sz-xs;
+		margin-top: var(--sz-xs);
 	}
 
 	html body .m-left-xs-screen-md,
 	html body .margin-left-xs-screen-md {
-		margin-left: $sz-xs;
+		margin-left: var(--sz-xs);
 	}
 
 	html body .m-right-xs-screen-md,
 	html body .margin-right-xs-screen-md {
-		margin-right: $sz-xs;
+		margin-right: var(--sz-xs);
 	}
 
 	html body .m-bottom-xs-screen-md,
 	html body .margin-bottom-xs-screen-md {
-		margin-bottom: $sz-xs;
+		margin-bottom: var(--sz-xs);
 	}
 
 	html body .m-sm-screen-md,
 	html body .margin-sm-screen-md {
-		margin: $sz-sm;
+		margin: var(--sz-sm);
 	}
 
 	html body .m-top-sm-screen-md,
 	html body .margin-top-sm-screen-md {
-		margin-top: $sz-sm;
+		margin-top: var(--sz-sm);
 	}
 
 	html body .m-left-sm-screen-md,
 	html body .margin-left-sm-screen-md {
-		margin-left: $sz-sm;
+		margin-left: var(--sz-sm);
 	}
 
 	html body .m-right-sm-screen-md,
 	html body .margin-right-sm-screen-md {
-		margin-right: $sz-sm;
+		margin-right: var(--sz-sm);
 	}
 
 	html body .m-bottom-sm-screen-md,
 	html body .margin-bottom-sm-screen-md {
-		margin-bottom: $sz-sm;
+		margin-bottom: var(--sz-sm);
 	}
 
 	html body .m-md-screen-md,
 	html body .margin-md-screen-md {
-		margin: $sz-md;
+		margin: var(--sz-md);
 	}
 
 	html body .m-top-md-screen-md,
 	html body .margin-top-md-screen-md {
-		margin-top: $sz-md;
+		margin-top: var(--sz-md);
 	}
 
 	html body .m-left-md-screen-md,
 	html body .margin-left-md-screen-md {
-		margin-left: $sz-md;
+		margin-left: var(--sz-md);
 	}
 
 	html body .m-right-md-screen-md,
 	html body .margin-right-md-screen-md {
-		margin-right: $sz-md;
+		margin-right: var(--sz-md);
 	}
 
 	html body .m-bottom-md-screen-md,
 	html body .margin-bottom-md-screen-md {
-		margin-bottom: $sz-md;
+		margin-bottom: var(--sz-md);
 	}
 
 	html body .m-lg-screen-md,
 	html body .margin-lg-screen-md {
-		margin: $sz-lg;
+		margin: var(--sz-lg);
 	}
 
 	html body .m-top-lg-screen-md,
 	html body .margin-top-lg-screen-md {
-		margin-top: $sz-lg;
+		margin-top: var(--sz-lg);
 	}
 
 	html body .m-left-lg-screen-md,
 	html body .margin-left-lg-screen-md {
-		margin-left: $sz-lg;
+		margin-left: var(--sz-lg);
 	}
 
 	html body .m-right-lg-screen-md,
 	html body .margin-right-lg-screen-md {
-		margin-right: $sz-lg;
+		margin-right: var(--sz-lg);
 	}
 
 	html body .m-bottom-lg-screen-md,
 	html body .margin-bottom-lg-screen-md {
-		margin-bottom: $sz-lg;
+		margin-bottom: var(--sz-lg);
 	}
 
 	html body .m-xlg-screen-md,
 	html body .margin-xlg-screen-md {
-		margin: $sz-xlg;
+		margin: var(--sz-xlg);
 	}
 
 	html body .m-top-xlg-screen-md,
 	html body .margin-top-xlg-screen-md {
-		margin-top: $sz-xlg;
+		margin-top: var(--sz-xlg);
 	}
 
 	html body .m-left-xlg-screen-md,
 	html body .margin-left-xlg-screen-md {
-		margin-left: $sz-xlg;
+		margin-left: var(--sz-xlg);
 	}
 
 	html body .m-right-xlg-screen-md,
 	html body .margin-right-xlg-screen-md {
-		margin-right: $sz-xlg;
+		margin-right: var(--sz-xlg);
 	}
 
 	html body .m-bottom-xlg-screen-md,
 	html body .margin-bottom-xlg-screen-md {
-		margin-bottom: $sz-xlg;
+		margin-bottom: var(--sz-xlg);
 	}
 }
