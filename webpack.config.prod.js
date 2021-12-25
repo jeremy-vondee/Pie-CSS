@@ -24,22 +24,29 @@ module.exports = {
 			{
 				test: /\.(sa|sc)ss$/,
 				use: [
-					{ loader: MiniCssExtractPlugin.loader },
-					{ loader: 'css-loader' },
+					MiniCssExtractPlugin.loader,
+					'css-loader',
 					{
 						loader: 'postcss-loader',
 						options: {
-							sourceMap: true,
-							postcssOptions: postcssPresetEnv( { stage: 3 } )
+							postcssOptions: {
+								plugins: [
+									postcssPresetEnv( {
+										stage: 3,
+										features: {
+											'nesting-rules': true,
+											'color-mod-function': { unresolved: 'warn' },
+											'all-property': true,
+											'overflow-property': true
+										},
+										autoprefixer: { grid: 'autoplace', flexbox: true }
+									} )
+								]
+							}
 						}
 					},
 					{
-						loader: 'sass-loader',
-						options: {
-							sassOptions: {
-								outputStyle: 'expanded'
-							}
-						}
+						loader: 'sass-loader'
 					}
 				],
 				exclude: /node_modules/

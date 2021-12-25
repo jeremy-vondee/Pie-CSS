@@ -2,6 +2,7 @@ const glob = require( 'glob' )
 const path = require( 'path' )
 const MiniCssExtractPlugin = require( 'mini-css-extract-plugin' )
 const FixStyleOnlyEntriesPlugin = require( 'webpack-fix-style-only-entries' )
+const postcssPresetEnv = require( 'postcss-preset-env' )
 
 module.exports = {
 	mode: 'development',
@@ -23,7 +24,24 @@ module.exports = {
 				use: [
 					{ loader: MiniCssExtractPlugin.loader },
 					{ loader: 'css-loader' },
-
+					{
+						loader: 'postcss-loader',
+						options: {
+							postcssOptions: {
+								plugins: [
+									postcssPresetEnv( {
+										stage: 3,
+										features: {
+											'nesting-rules': true,
+											'color-mod-function': { unresolved: 'warn' }
+										},
+										browsers: [ 'last 2 version', 'not dead', 'iOS >= 9' ],
+										autoprefixer: { grid: 'autoplace', flexbox: true }
+									} )
+								]
+							}
+						}
+					},
 					{
 						loader: 'sass-loader',
 						options: {

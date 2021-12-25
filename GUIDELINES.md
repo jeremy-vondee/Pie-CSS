@@ -2,14 +2,26 @@
 
 ## Scripts
 
+### `yarn watch`
+
+Starts the file watcher.
+
+### `yarn build`
+
+Builds all SASS files.
+
 ## Respository
+
+## Style Naming
+
+Styles should be named according to the name of the component or subcomponent to which they belong. For example the class `.grid-container` belongs to a subcomponent of the file `grid-container.scss` in the `Grid` component.
 
 ### Branches
 
 **Local branches must be updated by pulling from the `main` branch first before adding changes.**<br><br>
 Branches should be created for new styles in the following manner:
 
-- `component/<component-name>` for component styles.
+- `component/<component-name-in-lowercase>` for component styles.
 - `spacing/margin` for margin styles.
 - `spacing/padding` for padding styles.
 - `color/colors` for color styles.
@@ -41,13 +53,15 @@ File formatting is expected to follow the configuration specified in the `.edito
 
 - ### `src/components`
 
-This folder contains all components, grouped according to their styles. So, the structure below would be for a card component:
+**Component folder names must begin with a capital letter. A component's folder should always contain an `index.scss` file for its own styles.**<br>
+
+This folder contains all components, grouped according to styles of their subcomponents as well as their own styles. So, the structure below would be for a card component:
 
 `src`<br>
 |<br>
 |\_\_\_ `components`<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|\_\_\_ `card`<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|\_\_\_ `Card`<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|\_\_\_ `index.scss`<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|<br>
