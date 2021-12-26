@@ -37,6 +37,7 @@ File names are expected to be **kebab cased** for a much cleaner look. For examp
 
 ### Styles File Naming
 
+**Styles for all classes should be contained within a `.all.scss` file within the subfolder.**<br>
 Styles should be named according to the name of the component or subcomponent to which they belong. For example the class `.grid-container` belongs to a subcomponent of the file `grid-container.scss` in the `Grid` component.
 
 ## Source Files
