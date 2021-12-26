@@ -22,10 +22,8 @@ Styles should be named according to the name of the component or subcomponent to
 Branches should be created for new styles in the following manner:
 
 - `component/<component-name-in-lowercase>` for component styles.
-- `spacing/margin` for margin styles.
-- `spacing/padding` for padding styles.
-- `color/colors` for color styles.
-- `color/backgrounds` for background styles.
+- `spacing` for spacing styles.
+- `colors` for color styles.
 - `update/readme` for updating the README file.
 - `update/guidelines` for updating the GUIDELINES file.
 
