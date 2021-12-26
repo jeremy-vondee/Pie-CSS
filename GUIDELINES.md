@@ -31,6 +31,10 @@ Branches should be created for new styles in the following manner:
 
 Pull requests should be created when changes from other branches need to be merged into the `main` branch.
 
+## Variables
+
+All variables should reside in `_variables.scss` files in their respective directories.
+
 ## File Naming
 
 File names are expected to be **kebab cased** for a much cleaner look. For example: `some-component.scss`.
