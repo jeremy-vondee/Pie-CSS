@@ -12,10 +12,6 @@ Builds all SASS files.
 
 ## Respository
 
-## Style Naming
-
-Styles should be named according to the name of the component or subcomponent to which they belong. For example the class `.grid-container` belongs to a subcomponent of the file `grid-container.scss` in the `Grid` component.
-
 ### Branches
 
 **Local branches must be updated by pulling from the `main` branch first before adding changes.**<br><br>
@@ -38,6 +34,10 @@ All variables should reside in `_variables.scss` files in their respective direc
 ## File Naming
 
 File names are expected to be **kebab cased** for a much cleaner look. For example: `some-component.scss`.
+
+### Styles File Naming
+
+Styles should be named according to the name of the component or subcomponent to which they belong. For example the class `.grid-container` belongs to a subcomponent of the file `grid-container.scss` in the `Grid` component.
 
 ## Source Files
 
