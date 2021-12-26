@@ -43,9 +43,10 @@ module.exports = ( env ) => {
 											stage: 3,
 											features: {
 												'nesting-rules': true,
-												'color-mod-function': { unresolved: 'warn' }
+												'color-mod-function': { unresolved: 'warn' },
+												'all-property': true,
+												'overflow-property': true
 											},
-											browsers: [ 'last 2 version', 'not dead', 'iOS >= 9' ],
 											autoprefixer: { grid: 'autoplace', flexbox: true }
 										} )
 									]
