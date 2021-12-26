@@ -33,10 +33,11 @@ module.exports = ( env ) => {
 					test: /\.(sa|sc)ss$/,
 					use: [
 						{ loader: MiniCssExtractPlugin.loader },
-						{ loader: 'css-loader' },
+						{ loader: 'css-loader', options: { sourceMap: true } },
 						{
 							loader: 'postcss-loader',
 							options: {
+								sourceMap: true,
 								postcssOptions: {
 									plugins: [
 										postcssPresetEnv( {
@@ -56,6 +57,7 @@ module.exports = ( env ) => {
 						{
 							loader: 'sass-loader',
 							options: {
+								sourceMap: true,
 								sassOptions: {
 									outputStyle: 'expanded'
 								}
@@ -69,7 +71,8 @@ module.exports = ( env ) => {
 									return resourcesArray
 								}, [] )
 							}
-						}
+						},
+						{ loader: 'source-map-loader' }
 					],
 					exclude: /node_modules/
 				}
