@@ -1,0 +1,577 @@
+html body .m-xs,
+html body .margin-xs {
+	margin: $sizeXs;
+}
+
+html body .m-top-bottom-xs,
+html body .margin-top-bottom-xs {
+	margin-top: $sizeXs;
+	margin-bottom: $sizeXs;
+}
+
+html body .m-left-right-xs,
+html body .margin-left-right-xs {
+	margin-left: $sizeXs;
+	margin-right: $sizeXs;
+}
+
+html body .m-top-xs,
+html body .margin-top-xs {
+	margin-top: $sizeXs;
+}
+
+html body .m-left-xs,
+html body .margin-left-xs {
+	margin-left: $sizeXs;
+}
+
+html body .m-right-xs,
+html body .margin-right-xs {
+	margin-right: $sizeXs;
+}
+html body .m-bottom-xs,
+html body .margin-bottom-xs {
+	margin-bottom: $sizeXs;
+}
+
+html body .m-sm,
+html body .margin-sm {
+	margin: $sizeSm;
+}
+
+html body .m-top-bottom-sm,
+html body .margin-top-bottom-sm {
+	margin-top: $sizeSm;
+	margin-bottom: $sizeSm;
+}
+
+html body .m-left-right-sm,
+html body .margin-left-right-sm {
+	margin-left: $sizeSm;
+	margin-right: $sizeSm;
+}
+
+html body .m-top-sm,
+html body .margin-top-sm {
+	margin-top: $sizeSm;
+}
+
+html body .m-left-sm,
+html body .margin-left-sm {
+	margin-left: $sizeSm;
+}
+
+html body .m-right-sm,
+html body .margin-right-sm {
+	margin-right: $sizeSm;
+}
+
+html body .m-bottom-sm,
+html body .margin-bottom-sm {
+	margin-bottom: $sizeSm;
+}
+
+html body .m-md,
+html body .margin-md {
+	margin: $sizeMd;
+}
+
+html body .m-top-bottom-md,
+html body .margin-top-bottom-md {
+	margin-top: $sizeMd;
+	margin-bottom: $sizeMd;
+}
+
+html body .m-left-right-md,
+html body .margin-left-right-md {
+	margin-left: $sizeMd;
+	margin-right: $sizeMd;
+}
+
+html body .m-top-md,
+html body .margin-top-md {
+	margin-top: $sizeMd;
+}
+
+html body .m-left-md,
+html body .margin-left-md {
+	margin-left: $sizeMd;
+}
+
+html body .m-right-md,
+html body .margin-right-md {
+	margin-right: $sizeMd;
+}
+
+html body .m-bottom-md,
+html body .margin-bottom-md {
+	margin-bottom: $sizeMd;
+}
+
+html body .m-lg,
+html body .margin-lg {
+	margin: $sizeLg;
+}
+
+html body .m-top-bottom-lg,
+html body .margin-top-bottom-lg {
+	margin-top: $sizeLg;
+	margin-bottom: $sizeLg;
+}
+
+html body .m-left-right-lg,
+html body .margin-left-right-lg {
+	margin-left: $sizeLg;
+	margin-right: $sizeLg;
+}
+
+html body .m-top-lg,
+html body .margin-top-lg {
+	margin-top: $sizeLg;
+}
+
+html body .m-left-lg,
+html body .margin-left-lg {
+	margin-left: $sizeLg;
+}
+
+html body .m-right-lg,
+html body .margin-right-lg {
+	margin-right: $sizeLg;
+}
+
+html body .m-bottom-lg,
+html body .margin-bottom-lg {
+	margin-bottom: $sizeLg;
+}
+
+html body .m-xlg,
+html body .margin-xlg {
+	margin: $sizeXLg;
+}
+
+html body .m-top-bottom-xlg,
+html body .margin-top-bottom-xlg {
+	margin-top: $sizeXLg;
+	margin-bottom: $sizeXLg;
+}
+
+html body .m-left-right-xlg,
+html body .margin-left-right-xlg {
+	margin-left: $sizeXLg;
+	margin-right: $sizeXLg;
+}
+
+html body .m-top-xlg,
+html body .margin-top-xlg {
+	margin-top: $sizeXLg;
+}
+
+html body .m-left-xlg,
+html body .margin-left-xlg {
+	margin-left: $sizeXLg;
+}
+
+html body .m-right-xlg,
+html body .margin-right-xlg {
+	margin-right: $sizeXLg;
+}
+
+html body .m-bottom-xlg,
+html body .margin-bottom-xlg {
+	margin-bottom: $sizeXLg;
+}
+
+/* Screen extra-small */
+@media screen and (max-width: 320px) {
+	html body .m-none-screen-xs,
+	html body .margin-none-screen-xs {
+		margin: 0;
+	}
+
+	html body .m-xs-screen-xs,
+	html body .margin-xs-screen-xs {
+		margin: $sizeXs;
+	}
+
+	html body .m-top-xs-screen-xs,
+	html body .margin-top-xs-screen-xs {
+		margin-top: $sizeXs;
+	}
+
+	html body .m-left-xs-screen-xs,
+	html body .margin-left-xs-screen-xs {
+		margin-left: $sizeXs;
+	}
+
+	html body .m-right-xs-screen-xs,
+	html body .margin-right-xs-screen-xs {
+		margin-right: $sizeXs;
+	}
+
+	html body .m-bottom-xs-screen-xs,
+	html body .margin-bottom-xs-screen-xs {
+		margin-bottom: $sizeXs;
+	}
+
+	html body .m-sm-screen-xs,
+	html body .margin-sm-screen-xs {
+		margin: $sizeSm;
+	}
+
+	html body .m-top-sm-screen-xs,
+	html body .margin-top-sm-screen-xs {
+		margin-top: $sizeSm;
+	}
+
+	html body .m-left-sm-screen-xs,
+	html body .margin-left-sm-screen-xs {
+		margin-left: $sizeSm;
+	}
+
+	html body .m-right-sm-screen-xs,
+	html body .margin-right-sm-screen-xs {
+		margin-right: $sizeSm;
+	}
+
+	html body .m-bottom-sm-screen-xs,
+	html body .margin-bottom-sm-screen-xs {
+		margin-bottom: $sizeSm;
+	}
+
+	html body .m-md-screen-xs,
+	html body .margin-md-screen-xs {
+		margin: $sizeMd;
+	}
+
+	html body .m-top-md-screen-xs,
+	html body .margin-top-md-screen-xs {
+		margin-top: $sizeMd;
+	}
+
+	html body .m-left-md-screen-xs,
+	html body .margin-left-md-screen-xs {
+		margin-left: $sizeMd;
+	}
+
+	html body .m-right-md-screen-xs,
+	html body .margin-right-md-screen-xs {
+		margin-right: $sizeMd;
+	}
+
+	html body .m-bottom-md-screen-xs,
+	html body .margin-bottom-md-screen-xs {
+		margin-bottom: $sizeMd;
+	}
+
+	html body .m-lg-screen-xs,
+	html body .margin-lg-screen-xs {
+		margin: $sizeLg;
+	}
+
+	html body .m-top-lg-screen-xs,
+	html body .margin-top-lg-screen-xs {
+		margin-top: $sizeLg;
+	}
+
+	html body .m-left-lg-screen-xs,
+	html body .margin-left-lg-screen-xs {
+		margin-left: $sizeLg;
+	}
+
+	html body .m-right-lg-screen-xs,
+	html body .margin-right-lg-screen-xs {
+		margin-right: $sizeLg;
+	}
+
+	html body .m-bottom-lg-screen-xs,
+	html body .margin-bottom-lg-screen-xs {
+		margin-bottom: $sizeLg;
+	}
+
+	html body .m-xlg-screen-xs,
+	html body .margin-xlg-screen-xs {
+		margin: $sizeXLg;
+	}
+
+	html body .m-top-xlg-screen-xs,
+	html body .margin-top-xlg-screen-xs {
+		margin-top: $sizeXLg;
+	}
+
+	html body .m-left-xlg-screen-xs,
+	html body .margin-left-xlg-screen-xs {
+		margin-left: $sizeXLg;
+	}
+
+	html body .m-right-xlg-screen-xs,
+	html body .margin-right-xlg-screen-xs {
+		margin-right: $sizeXLg;
+	}
+
+	html body .m-bottom-xlg-screen-xs,
+	html body .margin-bottom-xlg-screen-xs {
+		margin-bottom: $sizeXLg;
+	}
+}
+
+/* Screen small */
+@media screen and (min-width: 321px) and (max-width: 600px) {
+	html body .m-xs-screen-sm,
+	html body .margin-xs-screen-sm {
+		margin: $sizeXs;
+	}
+
+	html body .m-top-xs-screen-sm,
+	html body .margin-top-xs-screen-sm {
+		margin-top: $sizeXs;
+	}
+
+	html body .m-left-xs-screen-sm,
+	html body .margin-left-xs-screen-sm {
+		margin-left: $sizeXs;
+	}
+
+	html body .m-right-xs-screen-sm,
+	html body .margin-right-xs-screen-sm {
+		margin-right: $sizeXs;
+	}
+
+	html body .m-bottom-xs-screen-sm,
+	html body .margin-bottom-xs-screen-sm {
+		margin-bottom: $sizeXs;
+	}
+
+	html body .m-sm-screen-sm,
+	html body .margin-sm-screen-sm {
+		margin: $sizeSm;
+	}
+
+	html body .m-top-sm-screen-sm,
+	html body .margin-top-sm-screen-sm {
+		margin-top: $sizeSm;
+	}
+
+	html body .m-left-sm-screen-sm,
+	html body .margin-left-sm-screen-sm {
+		margin-left: $sizeSm;
+	}
+
+	html body .m-right-sm-screen-sm,
+	html body .margin-right-sm-screen-sm {
+		margin-right: $sizeSm;
+	}
+
+	html body .m-bottom-sm-screen-sm,
+	html body .margin-bottom-sm-screen-sm {
+		margin-bottom: $sizeSm;
+	}
+
+	html body .m-md-screen-sm,
+	html body .margin-md-screen-sm {
+		margin: $sizeMd;
+	}
+
+	html body .m-top-md-screen-sm,
+	html body .margin-top-md-screen-sm {
+		margin-top: $sizeMd;
+	}
+
+	html body .m-left-md-screen-sm,
+	html body .margin-left-md-screen-sm {
+		margin-left: $sizeMd;
+	}
+
+	html body .m-right-md-screen-sm,
+	html body .margin-right-md-screen-sm {
+		margin-right: $sizeMd;
+	}
+
+	html body .m-bottom-md-screen-sm,
+	html body .margin-bottom-md-screen-sm {
+		margin-bottom: $sizeMd;
+	}
+
+	html body .m-lg-screen-sm,
+	html body .margin-lg-screen-sm {
+		margin: $sizeLg;
+	}
+
+	html body .m-top-lg-screen-sm,
+	html body .margin-top-lg-screen-sm {
+		margin-top: $sizeLg;
+	}
+
+	html body .m-left-lg-screen-sm,
+	html body .margin-left-lg-screen-sm {
+		margin-left: $sizeLg;
+	}
+
+	html body .m-right-lg-screen-sm,
+	html body .margin-right-lg-screen-sm {
+		margin-right: $sizeLg;
+	}
+
+	html body .m-bottom-lg-screen-sm,
+	html body .margin-bottom-lg-screen-sm {
+		margin-bottom: $sizeLg;
+	}
+
+	html body .m-xlg-screen-sm,
+	html body .margin-xlg-screen-sm {
+		margin: $sizeXLg;
+	}
+
+	html body .m-top-xlg-screen-sm,
+	html body .margin-top-xlg-screen-sm {
+		margin-top: $sizeXLg;
+	}
+
+	html body .m-left-xlg-screen-sm,
+	html body .margin-left-xlg-screen-sm {
+		margin-left: $sizeXLg;
+	}
+
+	html body .m-right-xlg-screen-sm,
+	html body .margin-right-xlg-screen-sm {
+		margin-right: $sizeXLg;
+	}
+
+	html body .m-bottom-xlg-screen-sm,
+	html body .margin-bottom-xlg-screen-sm {
+		margin-bottom: $sizeXLg;
+	}
+}
+
+/* Screen medium */
+@media screen and (min-width: 601px) and (max-width: 900px) {
+	html body .m-none-screen-md,
+	html body .margin-none-screen-md {
+		margin: 0;
+	}
+
+	html body .m-xs-screen-md,
+	html body .margin-xs-screen-md {
+		margin: $sizeXs;
+	}
+
+	html body .m-top-xs-screen-md,
+	html body .margin-top-xs-screen-md {
+		margin-top: $sizeXs;
+	}
+
+	html body .m-left-xs-screen-md,
+	html body .margin-left-xs-screen-md {
+		margin-left: $sizeXs;
+	}
+
+	html body .m-right-xs-screen-md,
+	html body .margin-right-xs-screen-md {
+		margin-right: $sizeXs;
+	}
+
+	html body .m-bottom-xs-screen-md,
+	html body .margin-bottom-xs-screen-md {
+		margin-bottom: $sizeXs;
+	}
+
+	html body .m-sm-screen-md,
+	html body .margin-sm-screen-md {
+		margin: $sizeSm;
+	}
+
+	html body .m-top-sm-screen-md,
+	html body .margin-top-sm-screen-md {
+		margin-top: $sizeSm;
+	}
+
+	html body .m-left-sm-screen-md,
+	html body .margin-left-sm-screen-md {
+		margin-left: $sizeSm;
+	}
+
+	html body .m-right-sm-screen-md,
+	html body .margin-right-sm-screen-md {
+		margin-right: $sizeSm;
+	}
+
+	html body .m-bottom-sm-screen-md,
+	html body .margin-bottom-sm-screen-md {
+		margin-bottom: $sizeSm;
+	}
+
+	html body .m-md-screen-md,
+	html body .margin-md-screen-md {
+		margin: $sizeMd;
+	}
+
+	html body .m-top-md-screen-md,
+	html body .margin-top-md-screen-md {
+		margin-top: $sizeMd;
+	}
+
+	html body .m-left-md-screen-md,
+	html body .margin-left-md-screen-md {
+		margin-left: $sizeMd;
+	}
+
+	html body .m-right-md-screen-md,
+	html body .margin-right-md-screen-md {
+		margin-right: $sizeMd;
+	}
+
+	html body .m-bottom-md-screen-md,
+	html body .margin-bottom-md-screen-md {
+		margin-bottom: $sizeMd;
+	}
+
+	html body .m-lg-screen-md,
+	html body .margin-lg-screen-md {
+		margin: $sizeLg;
+	}
+
+	html body .m-top-lg-screen-md,
+	html body .margin-top-lg-screen-md {
+		margin-top: $sizeLg;
+	}
+
+	html body .m-left-lg-screen-md,
+	html body .margin-left-lg-screen-md {
+		margin-left: $sizeLg;
+	}
+
+	html body .m-right-lg-screen-md,
+	html body .margin-right-lg-screen-md {
+		margin-right: $sizeLg;
+	}
+
+	html body .m-bottom-lg-screen-md,
+	html body .margin-bottom-lg-screen-md {
+		margin-bottom: $sizeLg;
+	}
+
+	html body .m-xlg-screen-md,
+	html body .margin-xlg-screen-md {
+		margin: $sizeXLg;
+	}
+
+	html body .m-top-xlg-screen-md,
+	html body .margin-top-xlg-screen-md {
+		margin-top: $sizeXLg;
+	}
+
+	html body .m-left-xlg-screen-md,
+	html body .margin-left-xlg-screen-md {
+		margin-left: $sizeXLg;
+	}
+
+	html body .m-right-xlg-screen-md,
+	html body .margin-right-xlg-screen-md {
+		margin-right: $sizeXLg;
+	}
+
+	html body .m-bottom-xlg-screen-md,
+	html body .margin-bottom-xlg-screen-md {
+		margin-bottom: $sizeXLg;
+	}
+}

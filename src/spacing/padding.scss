@@ -1,0 +1,577 @@
+html body .p-xs,
+html body .padding-xs {
+	padding: $sizeXs;
+}
+
+html body .p-top-bottom-xs,
+html body .padding-top-bottom-xs {
+	padding-top: $sizeXs;
+	padding-bottom: $sizeXs;
+}
+
+html body .p-left-right-xs,
+html body .padding-left-right-xs {
+	padding-left: $sizeXs;
+	padding-right: $sizeXs;
+}
+
+html body .p-top-xs,
+html body .padding-top-xs {
+	padding-top: $sizeXs;
+}
+
+html body .p-left-xs,
+html body .padding-left-xs {
+	padding-left: $sizeXs;
+}
+
+html body .p-right-xs,
+html body .padding-right-xs {
+	padding-right: $sizeXs;
+}
+html body .p-bottom-xs,
+html body .padding-bottom-xs {
+	padding-bottom: $sizeXs;
+}
+
+html body .p-sm,
+html body .padding-sm {
+	padding: $sizeSm;
+}
+
+html body .p-top-bottom-sm,
+html body .padding-top-bottom-sm {
+	padding-top: $sizeSm;
+	padding-bottom: $sizeSm;
+}
+
+html body .p-left-right-sm,
+html body .padding-left-right-sm {
+	padding-left: $sizeSm;
+	padding-right: $sizeSm;
+}
+
+html body .p-top-sm,
+html body .padding-top-sm {
+	padding-top: $sizeSm;
+}
+
+html body .p-left-sm,
+html body .padding-left-sm {
+	padding-left: $sizeSm;
+}
+
+html body .p-right-sm,
+html body .padding-right-sm {
+	padding-right: $sizeSm;
+}
+
+html body .p-bottom-sm,
+html body .padding-bottom-sm {
+	padding-bottom: $sizeSm;
+}
+
+html body .p-md,
+html body .padding-md {
+	padding: $sizeMd;
+}
+
+html body .p-top-bottom-md,
+html body .padding-top-bottom-md {
+	padding-top: $sizeMd;
+	padding-bottom: $sizeMd;
+}
+
+html body .p-left-right-md,
+html body .padding-left-right-md {
+	padding-left: $sizeMd;
+	padding-right: $sizeMd;
+}
+
+html body .p-top-md,
+html body .padding-top-md {
+	padding-top: $sizeMd;
+}
+
+html body .p-left-md,
+html body .padding-left-md {
+	padding-left: $sizeMd;
+}
+
+html body .p-right-md,
+html body .padding-right-md {
+	padding-right: $sizeMd;
+}
+
+html body .p-bottom-md,
+html body .padding-bottom-md {
+	padding-bottom: $sizeMd;
+}
+
+html body .p-lg,
+html body .padding-lg {
+	padding: $sizeLg;
+}
+
+html body .p-top-bottom-lg,
+html body .padding-top-bottom-lg {
+	padding-top: $sizeLg;
+	padding-bottom: $sizeLg;
+}
+
+html body .p-left-right-lg,
+html body .padding-left-right-lg {
+	padding-left: $sizeLg;
+	padding-right: $sizeLg;
+}
+
+html body .p-top-lg,
+html body .padding-top-lg {
+	padding-top: $sizeLg;
+}
+
+html body .p-left-lg,
+html body .padding-left-lg {
+	padding-left: $sizeLg;
+}
+
+html body .p-right-lg,
+html body .padding-right-lg {
+	padding-right: $sizeLg;
+}
+
+html body .p-bottom-lg,
+html body .padding-bottom-lg {
+	padding-bottom: $sizeLg;
+}
+
+html body .p-xlg,
+html body .padding-xlg {
+	padding: $sizeXLg;
+}
+
+html body .p-top-bottom-xlg,
+html body .padding-top-bottom-xlg {
+	padding-top: $sizeXLg;
+	padding-bottom: $sizeXLg;
+}
+
+html body .p-left-right-xlg,
+html body .padding-left-right-xlg {
+	padding-left: $sizeXLg;
+	padding-right: $sizeXLg;
+}
+
+html body .p-top-xlg,
+html body .padding-top-xlg {
+	padding-top: $sizeXLg;
+}
+
+html body .p-left-xlg,
+html body .padding-left-xlg {
+	padding-left: $sizeXLg;
+}
+
+html body .p-right-xlg,
+html body .padding-right-xlg {
+	padding-right: $sizeXLg;
+}
+
+html body .p-bottom-xlg,
+html body .padding-bottom-xlg {
+	padding-bottom: $sizeXLg;
+}
+
+/* Screen extra-small */
+@media screen and (max-width: 320px) {
+	html body .p-none-screen-xs,
+	html body .padding-none-screen-xs {
+		padding: 0;
+	}
+
+	html body .p-xs-screen-xs,
+	html body .padding-xs-screen-xs {
+		padding: $sizeXs;
+	}
+
+	html body .p-top-xs-screen-xs,
+	html body .padding-top-xs-screen-xs {
+		padding-top: $sizeXs;
+	}
+
+	html body .p-left-xs-screen-xs,
+	html body .padding-left-xs-screen-xs {
+		padding-left: $sizeXs;
+	}
+
+	html body .p-right-xs-screen-xs,
+	html body .padding-right-xs-screen-xs {
+		padding-right: $sizeXs;
+	}
+
+	html body .p-bottom-xs-screen-xs,
+	html body .padding-bottom-xs-screen-xs {
+		padding-bottom: $sizeXs;
+	}
+
+	html body .p-sm-screen-xs,
+	html body .padding-sm-screen-xs {
+		padding: $sizeSm;
+	}
+
+	html body .p-top-sm-screen-xs,
+	html body .padding-top-sm-screen-xs {
+		padding-top: $sizeSm;
+	}
+
+	html body .p-left-sm-screen-xs,
+	html body .padding-left-sm-screen-xs {
+		padding-left: $sizeSm;
+	}
+
+	html body .p-right-sm-screen-xs,
+	html body .padding-right-sm-screen-xs {
+		padding-right: $sizeSm;
+	}
+
+	html body .p-bottom-sm-screen-xs,
+	html body .padding-bottom-sm-screen-xs {
+		padding-bottom: $sizeSm;
+	}
+
+	html body .p-md-screen-xs,
+	html body .padding-md-screen-xs {
+		padding: $sizeMd;
+	}
+
+	html body .p-top-md-screen-xs,
+	html body .padding-top-md-screen-xs {
+		padding-top: $sizeMd;
+	}
+
+	html body .p-left-md-screen-xs,
+	html body .padding-left-md-screen-xs {
+		padding-left: $sizeMd;
+	}
+
+	html body .p-right-md-screen-xs,
+	html body .padding-right-md-screen-xs {
+		padding-right: $sizeMd;
+	}
+
+	html body .p-bottom-md-screen-xs,
+	html body .padding-bottom-md-screen-xs {
+		padding-bottom: $sizeMd;
+	}
+
+	html body .p-lg-screen-xs,
+	html body .padding-lg-screen-xs {
+		padding: $sizeLg;
+	}
+
+	html body .p-top-lg-screen-xs,
+	html body .padding-top-lg-screen-xs {
+		padding-top: $sizeLg;
+	}
+
+	html body .p-left-lg-screen-xs,
+	html body .padding-left-lg-screen-xs {
+		padding-left: $sizeLg;
+	}
+
+	html body .p-right-lg-screen-xs,
+	html body .padding-right-lg-screen-xs {
+		padding-right: $sizeLg;
+	}
+
+	html body .p-bottom-lg-screen-xs,
+	html body .padding-bottom-lg-screen-xs {
+		padding-bottom: $sizeLg;
+	}
+
+	html body .p-xlg-screen-xs,
+	html body .padding-xlg-screen-xs {
+		padding: $sizeXLg;
+	}
+
+	html body .p-top-xlg-screen-xs,
+	html body .padding-top-xlg-screen-xs {
+		padding-top: $sizeXLg;
+	}
+
+	html body .p-left-xlg-screen-xs,
+	html body .padding-left-xlg-screen-xs {
+		padding-left: $sizeXLg;
+	}
+
+	html body .p-right-xlg-screen-xs,
+	html body .padding-right-xlg-screen-xs {
+		padding-right: $sizeXLg;
+	}
+
+	html body .p-bottom-xlg-screen-xs,
+	html body .padding-bottom-xlg-screen-xs {
+		padding-bottom: $sizeXLg;
+	}
+}
+
+/* Screen small */
+@media screen and (min-width: 321px) and (max-width: 600px) {
+	html body .p-xs-screen-sm,
+	html body .padding-xs-screen-sm {
+		padding: $sizeXs;
+	}
+
+	html body .p-top-xs-screen-sm,
+	html body .padding-top-xs-screen-sm {
+		padding-top: $sizeXs;
+	}
+
+	html body .p-left-xs-screen-sm,
+	html body .padding-left-xs-screen-sm {
+		padding-left: $sizeXs;
+	}
+
+	html body .p-right-xs-screen-sm,
+	html body .padding-right-xs-screen-sm {
+		padding-right: $sizeXs;
+	}
+
+	html body .p-bottom-xs-screen-sm,
+	html body .padding-bottom-xs-screen-sm {
+		padding-bottom: $sizeXs;
+	}
+
+	html body .p-sm-screen-sm,
+	html body .padding-sm-screen-sm {
+		padding: $sizeSm;
+	}
+
+	html body .p-top-sm-screen-sm,
+	html body .padding-top-sm-screen-sm {
+		padding-top: $sizeSm;
+	}
+
+	html body .p-left-sm-screen-sm,
+	html body .padding-left-sm-screen-sm {
+		padding-left: $sizeSm;
+	}
+
+	html body .p-right-sm-screen-sm,
+	html body .padding-right-sm-screen-sm {
+		padding-right: $sizeSm;
+	}
+
+	html body .p-bottom-sm-screen-sm,
+	html body .padding-bottom-sm-screen-sm {
+		padding-bottom: $sizeSm;
+	}
+
+	html body .p-md-screen-sm,
+	html body .padding-md-screen-sm {
+		padding: $sizeMd;
+	}
+
+	html body .p-top-md-screen-sm,
+	html body .padding-top-md-screen-sm {
+		padding-top: $sizeMd;
+	}
+
+	html body .p-left-md-screen-sm,
+	html body .padding-left-md-screen-sm {
+		padding-left: $sizeMd;
+	}
+
+	html body .p-right-md-screen-sm,
+	html body .padding-right-md-screen-sm {
+		padding-right: $sizeMd;
+	}
+
+	html body .p-bottom-md-screen-sm,
+	html body .padding-bottom-md-screen-sm {
+		padding-bottom: $sizeMd;
+	}
+
+	html body .p-lg-screen-sm,
+	html body .padding-lg-screen-sm {
+		padding: $sizeLg;
+	}
+
+	html body .p-top-lg-screen-sm,
+	html body .padding-top-lg-screen-sm {
+		padding-top: $sizeLg;
+	}
+
+	html body .p-left-lg-screen-sm,
+	html body .padding-left-lg-screen-sm {
+		padding-left: $sizeLg;
+	}
+
+	html body .p-right-lg-screen-sm,
+	html body .padding-right-lg-screen-sm {
+		padding-right: $sizeLg;
+	}
+
+	html body .p-bottom-lg-screen-sm,
+	html body .padding-bottom-lg-screen-sm {
+		padding-bottom: $sizeLg;
+	}
+
+	html body .p-xlg-screen-sm,
+	html body .padding-xlg-screen-sm {
+		padding: $sizeXLg;
+	}
+
+	html body .p-top-xlg-screen-sm,
+	html body .padding-top-xlg-screen-sm {
+		padding-top: $sizeXLg;
+	}
+
+	html body .p-left-xlg-screen-sm,
+	html body .padding-left-xlg-screen-sm {
+		padding-left: $sizeXLg;
+	}
+
+	html body .p-right-xlg-screen-sm,
+	html body .padding-right-xlg-screen-sm {
+		padding-right: $sizeXLg;
+	}
+
+	html body .p-bottom-xlg-screen-sm,
+	html body .padding-bottom-xlg-screen-sm {
+		padding-bottom: $sizeXLg;
+	}
+}
+
+/* Screen medium */
+@media screen and (min-width: 601px) and (max-width: 900px) {
+	html body .p-none-screen-md,
+	html body .padding-none-screen-md {
+		padding: 0;
+	}
+
+	html body .p-xs-screen-md,
+	html body .padding-xs-screen-md {
+		padding: $sizeXs;
+	}
+
+	html body .p-top-xs-screen-md,
+	html body .padding-top-xs-screen-md {
+		padding-top: $sizeXs;
+	}
+
+	html body .p-left-xs-screen-md,
+	html body .padding-left-xs-screen-md {
+		padding-left: $sizeXs;
+	}
+
+	html body .p-right-xs-screen-md,
+	html body .padding-right-xs-screen-md {
+		padding-right: $sizeXs;
+	}
+
+	html body .p-bottom-xs-screen-md,
+	html body .padding-bottom-xs-screen-md {
+		padding-bottom: $sizeXs;
+	}
+
+	html body .p-sm-screen-md,
+	html body .padding-sm-screen-md {
+		padding: $sizeSm;
+	}
+
+	html body .p-top-sm-screen-md,
+	html body .padding-top-sm-screen-md {
+		padding-top: $sizeSm;
+	}
+
+	html body .p-left-sm-screen-md,
+	html body .padding-left-sm-screen-md {
+		padding-left: $sizeSm;
+	}
+
+	html body .p-right-sm-screen-md,
+	html body .padding-right-sm-screen-md {
+		padding-right: $sizeSm;
+	}
+
+	html body .p-bottom-sm-screen-md,
+	html body .padding-bottom-sm-screen-md {
+		padding-bottom: $sizeSm;
+	}
+
+	html body .p-md-screen-md,
+	html body .padding-md-screen-md {
+		padding: $sizeMd;
+	}
+
+	html body .p-top-md-screen-md,
+	html body .padding-top-md-screen-md {
+		padding-top: $sizeMd;
+	}
+
+	html body .p-left-md-screen-md,
+	html body .padding-left-md-screen-md {
+		padding-left: $sizeMd;
+	}
+
+	html body .p-right-md-screen-md,
+	html body .padding-right-md-screen-md {
+		padding-right: $sizeMd;
+	}
+
+	html body .p-bottom-md-screen-md,
+	html body .padding-bottom-md-screen-md {
+		padding-bottom: $sizeMd;
+	}
+
+	html body .p-lg-screen-md,
+	html body .padding-lg-screen-md {
+		padding: $sizeLg;
+	}
+
+	html body .p-top-lg-screen-md,
+	html body .padding-top-lg-screen-md {
+		padding-top: $sizeLg;
+	}
+
+	html body .p-left-lg-screen-md,
+	html body .padding-left-lg-screen-md {
+		padding-left: $sizeLg;
+	}
+
+	html body .p-right-lg-screen-md,
+	html body .padding-right-lg-screen-md {
+		padding-right: $sizeLg;
+	}
+
+	html body .p-bottom-lg-screen-md,
+	html body .padding-bottom-lg-screen-md {
+		padding-bottom: $sizeLg;
+	}
+
+	html body .p-xlg-screen-md,
+	html body .padding-xlg-screen-md {
+		padding: $sizeXLg;
+	}
+
+	html body .p-top-xlg-screen-md,
+	html body .padding-top-xlg-screen-md {
+		padding-top: $sizeXLg;
+	}
+
+	html body .p-left-xlg-screen-md,
+	html body .padding-left-xlg-screen-md {
+		padding-left: $sizeXLg;
+	}
+
+	html body .p-right-xlg-screen-md,
+	html body .padding-right-xlg-screen-md {
+		padding-right: $sizeXLg;
+	}
+
+	html body .p-bottom-xlg-screen-md,
+	html body .padding-bottom-xlg-screen-md {
+		padding-bottom: $sizeXLg;
+	}
+}

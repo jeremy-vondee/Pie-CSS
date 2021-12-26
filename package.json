@@ -1,7 +1,9 @@
 {
   "scripts": {
-    "watch": "node ./watch.js",
-    "build": "yarn webpack --config webpack.config.dev.js && yarn webpack --config webpack.config.prod.js"
+    "watch": "node ./watcher.js",
+    "build:all": "yarn build:dev && yarn build:prod",
+    "build:dev": "node ./build-dev.js",
+    "build:prod": "node ./build-prod.js"
   },
   "devDependencies": {
     "child_process": "^1.0.2",
@@ -20,6 +22,8 @@
     "postcss-preset-env": "^7.1.0",
     "sass": "^1.45.1",
     "sass-loader": "^12.4.0",
+    "sass-resources-loader": "^2.2.4",
+    "source-map-loader": "^3.0.0",
     "webpack": "^5.65.0",
     "webpack-cli": "^4.9.1",
     "webpack-fix-style-only-entries": "^0.6.1"

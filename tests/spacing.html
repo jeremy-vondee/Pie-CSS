@@ -1,13 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pie CSS: Spacing Test Document</title>
-  <!-- Import spacing styles -->
-</head>
-<body>
-  <!-- Test elements go here -->
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Pie CSS: Spacing Test Document</title>
+
+		<!-- Import spacing styles -->
+		<link rel="stylesheet" href="../dist/spacing/margin.min.css" />
+	</head>
+
+	<!-- Test styles -->
+	<style>
+		html,
+		body,
+		div {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+		}
+
+		section {
+			border: 2px solid #eee;
+		}
+
+		div.margin-elem {
+			background-color: greenyellow;
+			border-radius: 100px;
+			width: max-content;
+			height: max-content;
+			padding: 16px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		div.other-elem {
+			background-color: pink;
+			border-radius: 100px;
+			width: 50px;
+			height: 50px;
+		}
+
+		div.indicator {
+			background-color: pink;
+			border-radius: 10px;
+		}
+		div.indicator.top {
+			width: 50px;
+			height: 5px;
+		}
+		div.indicator.bottom {
+			width: 50px;
+			height: 5px;
+		}
+		div.indicator.right {
+			height: 50px;
+			width: 5px;
+		}
+		div.indicator.left {
+			height: 50px;
+			width: 5px;
+		}
+	</style>
+
+	<body>
+		<!-- Test elements go here -->
+
+		<!-- All round margin -->
+		<section class="m-sm">
+			<p>All round margin: top, bottom, left, right</p>
+			<div style="display: flex;">
+				<div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+					<div class="indicator top"></div>
+					<div style="display: flex; align-items: center; justify-content: center;">
+						<div class="indicator left"></div>
+						<div class="margin-elem m-xs">m-xs</div>
+						<div class="indicator right"></div>
+					</div>
+					<div class="indicator bottom"></div>
+				</div>
+				<div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+					<div class="indicator top"></div>
+					<div style="display: flex; align-items: center; justify-content: center;">
+						<div class="indicator left"></div>
+						<div class="margin-elem m-sm">m-sm</div>
+						<div class="indicator right"></div>
+					</div>
+					<div class="indicator bottom"></div>
+				</div>
+				<div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+					<div class="indicator top"></div>
+					<div style="display: flex; align-items: center; justify-content: center;">
+						<div class="indicator left"></div>
+						<div class="margin-elem m-md">m-md</div>
+						<div class="indicator right"></div>
+					</div>
+					<div class="indicator bottom"></div>
+				</div>
+				<div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+					<div class="indicator top"></div>
+					<div style="display: flex; align-items: center; justify-content: center;">
+						<div class="indicator left"></div>
+						<div class="margin-elem m-lg">m-lg</div>
+						<div class="indicator right"></div>
+					</div>
+					<div class="indicator bottom"></div>
+				</div>
+				<div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+					<div class="indicator top"></div>
+					<div style="display: flex; align-items: center; justify-content: center;">
+						<div class="indicator left"></div>
+						<div class="margin-elem m-xlg">m-xlg</div>
+						<div class="indicator right"></div>
+					</div>
+					<div class="indicator bottom"></div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Left margin -->
+		<section class="m-sm">
+			<p>Left Margin</p>
+			<div style="display: flex;">
+				<div class="other-elem"></div>
+				<div class="margin-elem m-left-xs">m-left-xs</div>
+			</div>
+			<div style="display: flex;">
+				<div class="other-elem"></div>
+				<div class="margin-elem m-left-sm">m-left-sm</div>
+			</div>
+			<div style="display: flex;">
+				<div class="other-elem"></div>
+				<div class="margin-elem m-left-md">m-left-md</div>
+			</div>
+			<div style="display: flex;">
+				<div class="other-elem"></div>
+				<div class="margin-elem m-left-lg">m-left-lg</div>
+			</div>
+			<div style="display: flex;">
+				<div class="other-elem"></div>
+				<div class="margin-elem m-left-xlg">m-left-xlg</div>
+			</div>
+		</section>
+
+		<!-- Right margin -->
+		<div style="display: flex;">
+			<div class="margin-elem m-right-xs">m-right-xs</div>
+			<div class="other-elem"></div>
+		</div>
+		<div style="display: flex;">
+			<div class="margin-elem m-right-sm">m-right-sm</div>
+			<div class="other-elem"></div>
+		</div>
+		<div style="display: flex;">
+			<div class="margin-elem m-right-md">m-right-md</div>
+			<div class="other-elem"></div>
+		</div>
+		<div style="display: flex;">
+			<div class="margin-elem m-right-lg">m-right-lg</div>
+			<div class="other-elem"></div>
+		</div>
+		<div style="display: flex;">
+			<div class="margin-elem m-right-xlg">m-right-xlg</div>
+			<div class="other-elem"></div>
+		</div>
+
+		<!-- Top margin -->
+		<div>
+			<div class="other-elem"></div>
+			<div class="margin-elem m-top-xs"></div>
+		</div>
+		<div>
+			<div class="other-elem"></div>
+			<div class="margin-elem m-top-sm"></div>
+		</div>
+		<div>
+			<div class="other-elem"></div>
+			<div class="margin-elem m-top-md"></div>
+		</div>
+		<div>
+			<div class="other-elem"></div>
+			<div class="margin-elem m-top-lg"></div>
+		</div>
+		<div>
+			<div class="other-elem"></div>
+			<div class="margin-elem m-top-xlg"></div>
+		</div>
+
+		<!-- Right margin -->
+		<div>
+			<div class="margin-elem m-bottom-xs"></div>
+			<div class="other-elem"></div>
+		</div>
+		<div>
+			<div class="margin-elem m-bottom-sm"></div>
+			<div class="other-elem"></div>
+		</div>
+		<div>
+			<div class="margin-elem m-bottom-md"></div>
+			<div class="other-elem"></div>
+		</div>
+		<div>
+			<div class="margin-elem m-bottom-lg"></div>
+			<div class="other-elem"></div>
+		</div>
+		<div>
+			<div class="margin-elem m-bottom-xlg"></div>
+			<div class="other-elem"></div>
+		</div>
+	</body>
 </html>
