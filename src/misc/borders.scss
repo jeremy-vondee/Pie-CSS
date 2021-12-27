@@ -1,3 +1,30 @@
+.bor,
+.border {
+	border-color: rgb(160, 160, 160);
+}
+
+.bor-left,
+.border-left {
+	border: none;
+	border-left-color: rgb(160, 160, 160);
+}
+
+.bor-right,
+.border-right {
+	border: none;
+	border-right-color: rgb(160, 160, 160);
+}
+
+.bor-top,
+.border-top {
+	border-top-color: rgb(160, 160, 160);
+}
+
+.bor-bottom,
+.border-bottom {
+	border-bottom-color: rgb(160, 160, 160);
+}
+
 .bor.bor-sz-xs,
 .border.border-size-xs {
 	border-width: $border-size-xs;
@@ -124,28 +151,76 @@
 }
 
 .bor.bor-sty-solid,
-.bor-left.bor-sty-solid,
-.bor-right.bor-sty-solid,
-.bor-top.bor-sty-solid,
-.bor-bottom.bor-sty-solid,
 .border.border-style-solid {
 	border-style: solid;
 }
 
+.bor-left.bor-sty-solid,
+.border-left.border-style-solid {
+	border-left-style: solid;
+}
+
+.bor-right.bor-sty-solid,
+.border-right.border-style-solid {
+	border-right-style: solid;
+}
+
+.bor-top.bor-sty-solid,
+.border-top.border-style-solid {
+	border-top-style: solid;
+}
+
+.bor-bottom.bor-sty-solid,
+.border-bottom.border-style-solid {
+	border-bottom-style: solid;
+}
+
 .bor.bor-sty-dashed,
-.bor-left.bor-sty-dashed,
-.bor-right.bor-sty-dashed,
-.bor-top.bor-sty-dashed,
-.bor-bottom.bor-sty-dashed,
 .border.border-style-dashed {
 	border-style: dashed;
 }
 
+.bor-left.bor-sty-dashed,
+.border-left.border-style-dashed {
+	border-left-style: dashed;
+}
+
+.bor-right.bor-sty-dashed,
+.border-right.border-style-dashed {
+	border-right-style: dashed;
+}
+
+.bor-top.bor-sty-dashed,
+.border-top.border-style-dashed {
+	border-top-style: dashed;
+}
+
+.bor-bottom.bor-sty-dashed,
+.border-bottom.border-style-dashed {
+	border-bottom-style: dashed;
+}
+
 .bor.bor-sty-dotted,
-.bor-left.bor-sty-dotted,
-.bor-right.bor-sty-dotted,
-.bor-top.bor-sty-dotted,
-.bor-bottom.bor-sty-dotted,
 .border.border-style-dotted {
 	border-style: dotted;
+}
+
+.bor-left.bor-sty-dotted,
+.border-left.border-style-dotted {
+	border-left-style: dotted;
+}
+
+.bor-right.bor-sty-dotted,
+.border-right.border-style-dotted {
+	border-right-style: dotted;
+}
+
+.bor-top.bor-sty-dotted,
+.border-top.border-style-dotted {
+	border-top-style: dotted;
+}
+
+.bor-bottom.bor-sty-dotted,
+.border-bottom.border-style-dotted {
+	border-bottom-style: dotted;
 }
