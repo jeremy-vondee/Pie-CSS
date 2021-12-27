@@ -86,9 +86,9 @@ const runBuildOnEvent = ( event, filePath ) => {
 		isBuilding = true
 
 		if ( event === 'add' ) {
-			console.log( colors.green( '\nBuilding all files. Please wait...\n' ) )
+			console.log( '\n', colors.bgBlue( 'build' ), colors.yellow( 'Building all files. Please wait...' ), '\n' )
 		} else {
-			console.log( colors.green( '\nBuilding. Please wait...\n' ) )
+			console.log( colors.blue( '\nBuilding. Please wait...\n' ) )
 		}
 
 		buildDev( event === 'add' ? 'all' : filePath ).onFinishBuild( () => {

@@ -2,6 +2,10 @@
 
 ## Scripts
 
+### `yarn`
+
+Installs all dependencies.
+
 ### `yarn watch`
 
 Starts the file watcher.

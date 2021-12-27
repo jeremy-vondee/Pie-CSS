@@ -1,3 +1,5 @@
+.btn,
 .button {
-	padding: $sizeSm;
+	@include normalize;
+	padding: $sizeXs $sizeSm;
 }

@@ -1,0 +1,226 @@
+.bor,
+.border {
+	border-color: rgb(160, 160, 160);
+}
+
+.bor-left,
+.border-left {
+	border: none;
+	border-left-color: rgb(160, 160, 160);
+}
+
+.bor-right,
+.border-right {
+	border: none;
+	border-right-color: rgb(160, 160, 160);
+}
+
+.bor-top,
+.border-top {
+	border-top-color: rgb(160, 160, 160);
+}
+
+.bor-bottom,
+.border-bottom {
+	border-bottom-color: rgb(160, 160, 160);
+}
+
+.bor.bor-sz-xs,
+.border.border-size-xs {
+	border-width: $border-size-xs;
+}
+
+.bor.bor-sz-sm,
+.border.border-size-sm {
+	border-width: $border-size-sm;
+}
+
+.bor.bor-sz-md,
+.border.border-size-md {
+	border-width: $border-size-md;
+}
+
+.bor.bor-sz-lg,
+.border.border-size-lg {
+	border-width: $border-size-lg;
+}
+
+.bor.bor-sz-xlg,
+.border.border-size-xlg {
+	border-width: $border-size-xlg;
+}
+
+.bor-left.bor-sz-xs,
+.border-left.border-size-xs {
+	border-left-width: $border-size-xs;
+}
+
+.bor-left.bor-sz-sm,
+.border-left.border-size-sm {
+	border-left-width: $border-size-sm;
+}
+
+.bor-left.bor-sz-md,
+.border-left.border-size-md {
+	border-left-width: $border-size-md;
+}
+
+.bor-left.bor-sz-lg,
+.border-left.border-size-lg {
+	border-left-width: $border-size-lg;
+}
+
+.bor-left.bor-sz-xlg,
+.border-left.border-size-xlg {
+	border-left-width: $border-size-xlg;
+}
+
+.bor-right.bor-sz-xs,
+.border-right.border-size-xs {
+	border-right-width: $border-size-xs;
+}
+
+.bor-right.bor-sz-sm,
+.border-right.border-size-sm {
+	border-right-width: $border-size-sm;
+}
+
+.bor-right.bor-sz-md,
+.border-right.border-size-md {
+	border-right-width: $border-size-md;
+}
+
+.bor-right.bor-sz-lg,
+.border-right.border-size-lg {
+	border-right-width: $border-size-lg;
+}
+
+.bor-right.bor-sz-xlg,
+.border-right.border-size-xlg {
+	border-right-width: $border-size-xlg;
+}
+
+.bor-top.bor-sz-xs,
+.border-top.border-size-xs {
+	border-top-width: $border-size-xs;
+}
+
+.bor-top.bor-sz-sm,
+.border-top.border-size-sm {
+	border-top-width: $border-size-sm;
+}
+
+.bor-top.bor-sz-md,
+.border-top.border-size-md {
+	border-top-width: $border-size-md;
+}
+
+.bor-top.bor-sz-lg,
+.border-top.border-size-lg {
+	border-top-width: $border-size-lg;
+}
+
+.bor-top.bor-sz-xlg,
+.border-top.border-size-xlg {
+	border-top-width: $border-size-xlg;
+}
+
+.bor-bottom.bor-sz-xs,
+.border-bottom.border-size-xs {
+	border-bottom-width: $border-size-xs;
+}
+
+.bor-bottom.bor-sz-sm,
+.border-bottom.border-size-sm {
+	border-bottom-width: $border-size-sm;
+}
+
+.bor-bottom.bor-sz-md,
+.border-bottom.border-size-md {
+	border-bottom-width: $border-size-md;
+}
+
+.bor-bottom.bor-sz-lg,
+.border-bottom.border-size-lg {
+	border-bottom-width: $border-size-lg;
+}
+
+.bor-bottom.bor-sz-xlg,
+.border-bottom.border-size-xlg {
+	border-bottom-width: $border-size-xlg;
+}
+
+.bor.bor-sty-solid,
+.border.border-style-solid {
+	border-style: solid;
+}
+
+.bor-left.bor-sty-solid,
+.border-left.border-style-solid {
+	border-left-style: solid;
+}
+
+.bor-right.bor-sty-solid,
+.border-right.border-style-solid {
+	border-right-style: solid;
+}
+
+.bor-top.bor-sty-solid,
+.border-top.border-style-solid {
+	border-top-style: solid;
+}
+
+.bor-bottom.bor-sty-solid,
+.border-bottom.border-style-solid {
+	border-bottom-style: solid;
+}
+
+.bor.bor-sty-dashed,
+.border.border-style-dashed {
+	border-style: dashed;
+}
+
+.bor-left.bor-sty-dashed,
+.border-left.border-style-dashed {
+	border-left-style: dashed;
+}
+
+.bor-right.bor-sty-dashed,
+.border-right.border-style-dashed {
+	border-right-style: dashed;
+}
+
+.bor-top.bor-sty-dashed,
+.border-top.border-style-dashed {
+	border-top-style: dashed;
+}
+
+.bor-bottom.bor-sty-dashed,
+.border-bottom.border-style-dashed {
+	border-bottom-style: dashed;
+}
+
+.bor.bor-sty-dotted,
+.border.border-style-dotted {
+	border-style: dotted;
+}
+
+.bor-left.bor-sty-dotted,
+.border-left.border-style-dotted {
+	border-left-style: dotted;
+}
+
+.bor-right.bor-sty-dotted,
+.border-right.border-style-dotted {
+	border-right-style: dotted;
+}
+
+.bor-top.bor-sty-dotted,
+.border-top.border-style-dotted {
+	border-top-style: dotted;
+}
+
+.bor-bottom.bor-sty-dotted,
+.border-bottom.border-style-dotted {
+	border-bottom-style: dotted;
+}
