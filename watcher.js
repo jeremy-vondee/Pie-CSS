@@ -1,22 +1,33 @@
 const chokidar = require( 'chokidar' )
 const { spawn } = require( 'child_process' )
 const colors = require( 'colors/safe' )
+const path = require( 'path' )
+const fs = require( 'fs' )
+const runPostBuild = require( './post-build' )
 
 // Start watching `src` folder
-const watcher = chokidar.watch( './src', { ignored: /((^|[/\\])\.. | _variables.scss)/, persistent: true } )
+const watcher = chokidar.watch( './src', { ignored: /((^|[/\\])\.. | _variables)/, persistent: true } )
 let isBuilding = false
 
 console.log( colors.blue( '\nWatching directory `src`...\n' ) )
+console.log( colors.blue( '-------------------------------------------------' ) )
 
-const buildDev = ( path ) => {
-	const devBuildProcess = spawn( 'yarn', [ 'build:dev', '--files', path ], { cwd: process.cwd(), shell: true } )
+try {
+	console.log( colors.blue( '\nRemoving `dist` folder...' ) )
+	fs.rmSync( path.resolve( __dirname, 'dist' ), { recursive: true, force: true } )
+	console.log( colors.blue( 'Success!\n' ) )
+	console.log( colors.blue( '-------------------------------------------------' ) )
+} catch ( error ) {
+	console.error( colors.red( 'Could not remove `dist` folder. Exiting...' ) )
+	console.error( colors.red( error ) )
+	process.exit( 1 )
+}
+
+const buildDev = ( filePath ) => {
+	const devBuildProcess = spawn( 'yarn', [ 'build:dev', '--files', filePath ], { cwd: process.cwd(), shell: true } )
 
 	devBuildProcess.stdout.on( 'data', ( data ) => {
 		console.log( data.toString() )
-	} )
-
-	devBuildProcess.stderr.on( 'data', ( data ) => {
-		console.log( colors.yellow( data.toString() ) )
 	} )
 
 	devBuildProcess.on( 'error', ( error ) => {
@@ -41,15 +52,11 @@ const buildDev = ( path ) => {
 	return { onFinishBuild }
 }
 
-const buildProd = ( path ) => {
-	const prodBuildProcess = spawn( 'yarn', [ 'build:prod', '--files', path ], { cwd: process.cwd(), shell: true } )
+const buildProd = ( filePath ) => {
+	const prodBuildProcess = spawn( 'yarn', [ 'build:prod', '--files', filePath ], { cwd: process.cwd(), shell: true } )
 
 	prodBuildProcess.stdout.on( 'data', ( data ) => {
 		console.log( data.toString() )
-	} )
-
-	prodBuildProcess.stderr.on( 'data', ( data ) => {
-		console.log( colors.yellow( data.toString() ) )
 	} )
 
 	prodBuildProcess.on( 'error', ( error ) => {
@@ -74,7 +81,7 @@ const buildProd = ( path ) => {
 	return { onFinishBuild }
 }
 
-const runBuildOnEvent = ( event, path ) => {
+const runBuildOnEvent = ( event, filePath ) => {
 	if ( !isBuilding ) {
 		isBuilding = true
 
@@ -84,10 +91,15 @@ const runBuildOnEvent = ( event, path ) => {
 			console.log( colors.green( '\nBuilding. Please wait...\n' ) )
 		}
 
-		buildDev( event === 'add' ? 'all' : path ).onFinishBuild( () => {
-			buildProd( event === 'add' ? 'all' : path ).onFinishBuild( ( code ) => {
+		buildDev( event === 'add' ? 'all' : filePath ).onFinishBuild( () => {
+			buildProd( event === 'add' ? 'all' : filePath ).onFinishBuild( ( code ) => {
 				if ( code === 0 ) {
+					console.log( colors.green( '\nRunning post-build at `dist`...\n' ) )
+					runPostBuild( path.resolve( __dirname, 'dist' ) )
+					console.log( colors.green( 'Post-build successful!\n' ) )
+					console.log( colors.green( '-------------------------------------------------' ) )
 					console.log( colors.blue( '\nWatching directory `src`...\n' ) )
+					console.log( colors.blue( '-------------------------------------------------' ) )
 				}
 			} )
 		} )
