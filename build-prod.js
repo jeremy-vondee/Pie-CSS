@@ -18,6 +18,10 @@ const build = ( buildPath = 'all' ) => {
 		shell: true
 	} )
 
+	buildProcess.stdout.on( 'data', ( data ) => {
+		console.log( data.toString() )
+	} )
+
 	buildProcess.on( 'error', ( error ) => {
 		console.log( colors.red( error.message ) )
 		throw error
