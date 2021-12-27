@@ -19,10 +19,6 @@ const build = ( buildPath = 'all' ) => {
 		console.log( data.toString() )
 	} )
 
-	buildProcess.stderr.on( 'data', ( data ) => {
-		console.log( colors.yellow( data.toString() ) )
-	} )
-
 	buildProcess.on( 'error', ( error ) => {
 		console.log( colors.red( error.message ) )
 		throw error
