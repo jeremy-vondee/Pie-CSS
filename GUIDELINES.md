@@ -29,7 +29,7 @@ Pull requests should be created when changes from other branches need to be merg
 
 ## Variables
 
-All variables should reside in `_variables.scss` files in their respective directories.
+All variables should reside in a `_variables` folder at the root of `./src`.
 
 ## File Naming
 
@@ -37,7 +37,6 @@ File names are expected to be **kebab cased** for a much cleaner look. For examp
 
 ### Styles File Naming
 
-**All other style files should be imported within a `.all.scss` file within their subfolder.**<br>
 Styles should be named according to the name of the component or subcomponent to which they belong. For example the class `.grid-container` belongs to a subcomponent of the file `grid-container.scss` in the `Grid` component.
 
 ## Source Files
