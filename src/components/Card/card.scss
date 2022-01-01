@@ -1,2 +1,9 @@
 .card {
+    box-shadow: $shadow-0;
+    min-width: 300px;
+    cursor: pointer;
+    font-family: $base-text;
+    border-radius: $sizeSm;
+    padding-bottom: $sizeSm;
+    margin: $sizeSm;
 }

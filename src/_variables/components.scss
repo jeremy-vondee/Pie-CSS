@@ -5,3 +5,19 @@
 	margin: 0;
 	box-sizing: border-box;
 }
+
+@mixin button {
+	box-sizing: border-box;
+	border: hidden;
+	font-family: $base-text;
+	background-color: $color-grey;
+	color: $color-black;
+	border-radius: $sizeXs;
+	padding: $sizeSm;
+	cursor: pointer;
+}
+
+@mixin flex-properties {
+	display: flex;
+	align-content: center;
+}
