@@ -1,0 +1,16 @@
+html body,
+main,
+section,
+header {
+    font-family: $is-segoe-ui;
+}
+
+.container {
+	margin-top: 100px;
+}
+
+.title {
+	text-align: center;
+	font-weight: bold;
+	width: 100%;
+}

@@ -1,12 +1,5 @@
 $is-segoe-ui: 'Segoe UI';
 
-html body,
-main,
-section,
-header {
-    font-family: $is-segoe-ui;
-}
-
 @mixin normalize {
 outline: none;
 border: none;
@@ -31,17 +24,8 @@ cursor: pointer;
 	align-content: center;
 }
 
-.container {
-	margin-top: 100px;
-}
-
 @mixin float-direction {
     float: right;
 	margin-right: $sizeMd;
 }
 
-.title {
-	text-align: center;
-	font-weight: bold;
-	width: 100%;
-}

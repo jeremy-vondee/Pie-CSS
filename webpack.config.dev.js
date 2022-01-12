@@ -7,7 +7,7 @@ const postcssPresetEnv = require( 'postcss-preset-env' )
 const createEntriesByPath = ( envPath ) => {
 	if ( envPath === 'all' ) {
 		return glob.sync( './src/**/*.{scss,sass}' ).reduce( function ( entryObject, selectedPath ) {
-			if ( /[a-z]\.(sa|sc)ss$/.test( selectedPath ) && !selectedPath.includes( '_variables' ) ) {
+			if ( /[a-z]\.(sa|sc)ss$/.test( selectedPath ) && !selectedPath.includes( '_global' ) ) {
 				const exportPath = path.parse( selectedPath.replace( './src', '' ).replace( /\.(sa|sc)ss$/, '' ) )
 				entryObject[`${exportPath.dir}/${exportPath.name}`] = selectedPath
 			}
@@ -66,7 +66,7 @@ module.exports = ( env ) => {
 						{
 							loader: 'sass-resources-loader',
 							options: {
-								resources: glob.sync( './src/_variables/**.scss' ).reduce( function ( resourcesArray, selectedPath ) {
+								resources: glob.sync( './src/_global/**.scss' ).reduce( function ( resourcesArray, selectedPath ) {
 									resourcesArray.push( path.resolve( __dirname, selectedPath ) )
 									return resourcesArray
 								}, [] )

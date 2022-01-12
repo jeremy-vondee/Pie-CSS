@@ -6,7 +6,7 @@ const fs = require( 'fs' )
 const runPostBuild = require( './post-build' )
 
 // Start watching `src` folder
-const watcher = chokidar.watch( './src', { ignored: './src/_variables', persistent: true } )
+const watcher = chokidar.watch( './src', { ignored: './src/_global', persistent: true } )
 let isBuilding = false
 
 console.log( colors.blue( '\nWatching directory `src`...\n' ) )
