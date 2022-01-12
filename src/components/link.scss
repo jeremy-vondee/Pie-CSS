@@ -1,6 +1,6 @@
 .link {
     text-decoration: none;
-    font-family: $base-text;
+    font-family: $is-segoe-ui;
     color: $color-info;
 }
 
@@ -110,4 +110,8 @@
 
 .link-is-white {
     color: $color-white;
+}
+
+.link-is-black {
+    color: $color-black;
 }

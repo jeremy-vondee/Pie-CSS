@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pie-CSS</title>
     <link rel="stylesheet" href="../dist/components/Button/index.min.css" />
+    <link rel="stylesheet" href="../dist/index.css" />
   </head>
   <style>
     span {
@@ -19,7 +20,7 @@
       <p>A standard button</p>
       <button class="button">Button</button>
     </div>
-    <div class="default-btn">
+    <div class="container">
       <h2>Colored button</h2>
       <p>A button can have different colors</p>
       <button class="button is-red">Button</button>
@@ -27,19 +28,46 @@
       <button class="button is-warning">Button</button>
       <button class="button is-info">Button</button>
     </div>
-    <div class="default-btn">
-      <h2>Colored button</h2>
-      <p>A button can be formatted to have different colors</p>
-      <button class="button is-red">Button</button>
-      <button class="button is-success">Button</button>
-      <button class="button is-warning">Button</button>
-    </div>
-    <button class="icon is-teal">
+    <div class="container">
+      <h2>Icon button</h2>
+      <p>A button can have only an icon</p>
+      <button class="icon">
         <img src="./plane.svg" alt="">
     </button>
-    <button class="social-button is-red">
+    </div>
+    <div class="container">
+      <h2>Social media buttons</h2>
+      <p>A button can be formatted to link to a social website</p>
+      <button class="social-button is-blue">
         <img src="./plane.svg" alt="">
         facebook
     </button>
+      <button class="social-button is-pink">
+        <img src="./plane.svg" alt="">
+        Instagram
+    </button>
+      <button class="social-button is-yellow">
+        <img src="./plane.svg" alt="">
+        Snapchat
+    </button>
+      <button class="social-button is-black">
+        <img src="./plane.svg" alt="">
+        Tiktok
+    </button>
+    </div>
+    <div class="container">
+      <h2>Circular buttons</h2>
+      <p>A button can be circular</p>
+      <button class="is-circular">
+        <img src="./plane.svg" alt="">
+    </button>
+    </div>
+    <div class="container">
+      <h2>float buttons</h2>
+      <p>A button can be floated to right</p>
+      <button class="button float-right">
+        button
+      </button>
+    </div>
   </body>
 </html>

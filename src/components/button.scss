@@ -225,9 +225,10 @@
 	height: 50px;
 }
 
-.circular {
+.is-circular {
+	@extend .icon;
 	border-radius: 50%;
-	padding: $sizeXs;
+	padding: $sizeSm;
 }
 
 .social-button {
@@ -239,4 +240,8 @@
 		height: 15px;
 		margin-right: $sizeXs;
 	}
+}
+
+.float-right {
+	@include float-direction;
 }

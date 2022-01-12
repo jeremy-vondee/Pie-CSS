@@ -1,0 +1,11 @@
+.card-profile {
+    margin: $sizeMd auto 0 auto;
+    width: 160px;
+    height: 160px;
+    & img {
+        width: inherit;
+        height: inherit;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+}

@@ -1,0 +1,13 @@
+form {
+    font-family: $is-segoe-ui;
+    display: flex;
+    flex-direction: column;
+
+    & input {
+        border-radius: $sizeSm;
+        padding: $sizeSm;
+        margin-top: $sizeSm;
+        border: 1px solid $color-dark;
+        outline: none;
+    }
+}
