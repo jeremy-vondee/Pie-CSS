@@ -1,119 +1,204 @@
 const chokidar = require( 'chokidar' )
-const { spawn } = require( 'child_process' )
-const colors = require( 'colors/safe' )
-const path = require( 'path' )
 const fs = require( 'fs' )
+const { printDivider, printErrorMessage, printActionMessage, printMessage } = require( './print-utilities' )
+const builder = require( './builder' )
 const runPostBuild = require( './post-build' )
+const { paths, folders } = require( './config' )
+const { buildPaths, buildEvents } = require( './constants' )
 
 // Start watching `src` folder
-const watcher = chokidar.watch( './src', { ignored: './src/_global', persistent: true } )
+const watcher = chokidar.watch( './src', { persistent: true } )
+const fileBuilder = builder( { stderr: false } )
+
+let devBuild, prodBuild
 let isBuilding = false
+let isRestarting = false
+let currentBuildPath = null
 
-console.log( colors.blue( '\nWatching directory `src`...\n' ) )
-console.log( colors.blue( '-------------------------------------------------' ) )
-
-try {
-	console.log( colors.blue( '\nRemoving `dist` folder...' ) )
-	fs.rmSync( path.resolve( __dirname, 'dist' ), { recursive: true, force: true } )
-	console.log( colors.blue( 'Success!\n' ) )
-	console.log( colors.blue( '-------------------------------------------------' ) )
-} catch ( error ) {
-	console.error( colors.red( 'Could not remove `dist` folder. Exiting...' ) )
-	console.error( colors.red( error ) )
-	process.exit( 1 )
-}
-
-const buildDev = ( filePath ) => {
-	const devBuildProcess = spawn( 'yarn', [ 'build:dev', '--files', filePath ], { cwd: process.cwd(), shell: true } )
-
-	devBuildProcess.stdout.on( 'data', ( data ) => {
-		console.log( data.toString() )
-	} )
-
-	devBuildProcess.on( 'error', ( error ) => {
-		console.log( colors.red( error.message ) )
-		throw error
-	} )
-
-	const onFinishBuild = ( callback ) => {
-		return devBuildProcess.on( 'close', ( code ) => {
-			if ( code === 0 ) {
-				console.log( colors.green( 'Build successful!' ) )
-				console.log( colors.green( '-------------------------------------------------' ) )
-			} else {
-				console.log( `child process exited with code ${code}` )
-			}
-
-			callback( code )
-			isBuilding = false
-		} )
+const removeDistDirectory = () => {
+	try {
+		printActionMessage( 'info', 'remove', 'Removing `dist` folder...' )
+		fs.rmSync( paths.DIST, { recursive: true, force: true } )
+		printActionMessage( 'success', 'done', 'Successfully removed `dist` folder!' )
+		printDivider( '•', 70, { textColor: 'grey' } )
+	} catch ( error ) {
+		printActionMessage( 'error', 'error', error.message )
+		printActionMessage( 'error', 'error', 'Could not remove `dist` folder. Exiting...' )
 	}
-
-	return { onFinishBuild }
 }
 
-const buildProd = ( filePath ) => {
-	const prodBuildProcess = spawn( 'yarn', [ 'build:prod', '--files', filePath ], { cwd: process.cwd(), shell: true } )
-
-	prodBuildProcess.stdout.on( 'data', ( data ) => {
-		console.log( data.toString() )
-	} )
-
-	prodBuildProcess.on( 'error', ( error ) => {
-		console.log( colors.red( error.message ) )
-		throw error
-	} )
-
-	const onFinishBuild = ( callback ) => {
-		return prodBuildProcess.on( 'close', ( code ) => {
-			if ( code === 0 ) {
-				console.log( colors.green( 'Build successful!' ) )
-				console.log( colors.green( '-------------------------------------------------' ) )
-			} else {
-				console.log( `child process exited with code ${code}` )
-			}
-
-			callback( code )
-			isBuilding = false
-		} )
-	}
-
-	return { onFinishBuild }
+const printHelpMessage = () => {
+	printDivider( '•', 70, { textColor: 'grey' } )
+	printMessage( 'The available commands are: ', { startLine: true, endLine: true } )
+	printActionMessage( 'info', 'command', 'Type `help` to display this message.' )
+	printActionMessage( 'info', 'command', 'Type `rs` or `restart` to restart the watcher.' )
+	printActionMessage( 'info', 'command', 'Type `die`, `bye` or `exit` to exit the watcher.' )
+	printDivider( '•', 70, { textColor: 'grey' } )
 }
 
-const runBuildOnEvent = ( event, filePath ) => {
-	if ( !isBuilding ) {
-		isBuilding = true
+const buildAll = ( buildPath ) => {
+	isBuilding = true
+	devBuild = fileBuilder.startBuild( fileBuilder.modes.dev, buildPath )
+	prodBuild = fileBuilder.startBuild( fileBuilder.modes.prod, buildPath )
 
-		if ( event === 'add' ) {
-			console.log( '\n', colors.bgBlue( 'build' ), colors.yellow( 'Building all files. Please wait...' ), '\n' )
-		} else {
-			console.log( colors.blue( '\nBuilding. Please wait...\n' ) )
+	devBuild.onExit( ( code ) => {
+		if ( code === 0 ) {
+			printActionMessage( 'info', 'exit', 'Expanded build exited.' )
 		}
 
-		buildDev( event === 'add' ? 'all' : filePath ).onFinishBuild( () => {
-			buildProd( event === 'add' ? 'all' : filePath ).onFinishBuild( ( code ) => {
-				if ( code === 0 ) {
-					console.log( colors.green( '\nRunning post-build at `dist`...\n' ) )
-					runPostBuild( path.resolve( __dirname, 'dist' ) )
-					console.log( colors.green( 'Post-build successful!\n' ) )
-					console.log( colors.green( '-------------------------------------------------' ) )
-					console.log( colors.blue( '\nWatching directory `src`...\n' ) )
-					console.log( colors.blue( '-------------------------------------------------' ) )
+		isRestarting = false
+		isBuilding = false
+		devBuild = undefined
+	} )
+
+	prodBuild.onExit( ( code ) => {
+		if ( code === 0 ) {
+			printActionMessage( 'info', 'exit', 'Minified build exited.' )
+
+			printDivider( '•', 70, { textColor: 'grey' } )
+			printActionMessage( 'info', 'post-build', 'Running post-build at `dist`...' )
+			runPostBuild( paths.DIST )
+			printActionMessage( 'success', 'done', 'Post-build successful!' )
+			printDivider( '•', 70, { textColor: 'grey' } )
+			printAfterBuildMessage()
+
+			fileBuilder.onGetUserInput( ( data ) => {
+				const command = data.toString().trim()
+
+				switch ( command ) {
+					case 'rs':
+					case 'restart': {
+						isBuilding = false
+						printActionMessage( 'info', 'restart', 'Restarting. Please wait...' )
+						return buildAll( buildPath )
+					}
+					case 'die':
+					case 'bye':
+					case 'exit':
+						printActionMessage( 'info', 'exit', 'Exiting...' )
+						printDivider( '•', 70, { textColor: 'grey' } )
+						return process.exit( 0 )
+					case 'help':
+						return printHelpMessage()
+					default:
+						printActionMessage( 'error', 'invalid', `Invalid command "${command}" entered.` )
+						return printHelpMessage()
+				}
+			} )
+		}
+
+		isRestarting = false
+		isBuilding = false
+		prodBuild = undefined
+	} )
+}
+
+const printAfterBuildMessage = () => {
+	printActionMessage( 'info', 'info', 'Type `help` to show the show the available commands.' )
+	printActionMessage( 'info', 'info', 'Type `rs` or `restart` to restart the watcher.' )
+	printActionMessage( 'info', 'info', 'Type `die`, `bye` or `exit` to exit the watcher.' )
+	printDivider( '•', 70, { textColor: 'grey' } )
+	printActionMessage( 'custom', 'watch', 'Watching directory `src`...' )
+}
+
+const runBuildOnEvent = ( buildPath ) => {
+	if ( buildPaths.IS_VALID_PATH( buildPath ) ) {
+		if ( isRestarting ) {
+			printActionMessage( 'info', 'restart', 'Restarting. Please wait...' )
+
+			if ( !devBuild && !prodBuild ) {
+				return buildAll( buildPath )
+			}
+		} else {
+			if ( buildPath === buildPaths.ALL_FILES ) {
+				removeDistDirectory()
+				printActionMessage( 'info', 'build', 'Building all files. Please wait...' )
+			} else {
+				printActionMessage( 'info', 'build', 'Building. Please wait...' )
+			}
+
+			return buildAll( buildPath )
+		}
+	}
+}
+
+for ( let eventKey in buildEvents ) {
+	const event = buildEvents[eventKey]
+	if ( event === buildEvents.ADD ) continue
+
+	if ( event === buildEvents.READY ) {
+		watcher.on( event, () => {
+			// Build all files when the watcher is ready
+			runBuildOnEvent( buildPaths.ALL_FILES )
+
+			watcher.addListener( buildEvents.ADD, async ( filePath ) => {
+				if ( isBuilding ) {
+					isRestarting = true
+
+					try {
+						if ( devBuild ) {
+							await devBuild.endBuild( 0 )
+						}
+						if ( prodBuild ) {
+							await prodBuild.endBuild( 0 )
+						}
+					} catch ( error ) {
+						// Ignore error
+					}
+
+					if ( buildPaths.TO_FILE_PATH( filePath ) !== currentBuildPath ) {
+						currentBuildPath = buildPaths.ALL_FILES
+						return runBuildOnEvent( currentBuildPath )
+					}
+				}
+
+				if ( filePath.includes( folders.GLOBAL_VARS ) ) {
+					currentBuildPath = buildPaths.ALL_FILES
+					return runBuildOnEvent( currentBuildPath )
+				} else {
+					currentBuildPath = buildPaths.TO_FILE_PATH( filePath )
+					return runBuildOnEvent( currentBuildPath )
 				}
 			} )
 		} )
+	} else {
+		watcher.on( event, async ( filePath ) => {
+			if ( isBuilding ) {
+				isRestarting = true
+
+				try {
+					if ( devBuild ) {
+						await devBuild.endBuild( 0 )
+					}
+					if ( prodBuild ) {
+						await prodBuild.endBuild( 0 )
+					}
+				} catch ( error ) {
+					// Ignore error
+				}
+
+				if ( buildPaths.TO_FILE_PATH( filePath ) !== currentBuildPath ) {
+					currentBuildPath = buildPaths.ALL_FILES
+					return runBuildOnEvent( currentBuildPath )
+				}
+			}
+
+			if ( event === buildEvents.UNLINK ) {
+				currentBuildPath = buildPaths.ALL_FILES
+				return runBuildOnEvent( currentBuildPath )
+			} else {
+				if ( filePath.includes( folders.GLOBAL_VARS ) ) {
+					currentBuildPath = buildPaths.ALL_FILES
+					return runBuildOnEvent( currentBuildPath )
+				} else {
+					currentBuildPath = buildPaths.TO_FILE_PATH( filePath )
+					return runBuildOnEvent( currentBuildPath )
+				}
+			}
+		} )
 	}
 }
 
-const buildEvents = [ 'add', 'change', 'unlink' ]
-
-buildEvents.forEach( ( event ) => {
-	watcher.on( event, ( path ) => {
-		runBuildOnEvent( event, path )
-	} )
-} )
-
-watcher.on( 'error', function ( error ) {
-	console.error( colors.red( error.message ) )
+watcher.on( 'error', ( error ) => {
+	printErrorMessage( error.message )
 } )

@@ -1,12 +1,10 @@
-html body,
-main,
-section,
-header {
+html body {
     font-family: $is-segoe-ui;
+	@include normalize;
 }
 
 .container {
-	margin-top: 100px;
+	margin: 50px $sizeLg;
 }
 
 .title {

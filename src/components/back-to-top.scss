@@ -1,0 +1,22 @@
+@import "../misc/elevation.scss";
+@import "../components/button.scss";
+
+html,
+body {
+    overflow-y: auto;
+    position: relative;
+    scroll-behavior: smooth;
+}
+
+.back-home {
+    @extend .icon-btn;
+    @extend .elev-5;
+    position: fixed;
+    bottom: $sizeLg;
+    right: 0;
+    margin-right: $sizeXLg;
+    display: none;
+    width: $sizeXLg;
+    height: $sizeXLg;
+    @extend .float-right;
+}

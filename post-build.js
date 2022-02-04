@@ -1,76 +1,228 @@
-const fs = require( 'fs' )
-const path = require( 'path' )
-const glob = require( 'glob' )
+const fs = require("fs");
+const path = require("path");
+const glob = require("glob");
 
-const getDirectoryPaths = ( root ) => {
-	return glob.sync( path.join( root, '/**/' ) )
-}
+const getDirectoryPaths = (root) => {
+  return glob.sync(path.join(root, "/**/"));
+};
 
-const runPostBuild = ( rootPath, options ) => {
-	const appliedOptions = {
-		rootFile: { name: 'index', expanded: { ext: '.css' }, compressed: { prefix: '.min' } },
-		subDirFile: { name: 'index', expanded: { ext: '.css' }, compressed: { prefix: '.min' } },
-		...options
-	}
+const runPostBuild = (rootPath, options) => {
+  const appliedOptions = {
+    rootFile: {
+      name: "index",
+      expanded: { ext: ".css" },
+      compressed: { prefix: ".min" },
+    },
+    subDirFile: {
+      name: "index",
+      expanded: { ext: ".css" },
+      compressed: { prefix: ".min" },
+    },
+    rootDirPostBuildOrder: [{ folder: "components", sendTo: "top" }],
+    subDirPostBuildOrder: [
+      { folder: "animations", matchFiles: /^animation-/i, sendTo: "bottom" },
+    ],
+    ...options,
+  };
 
-	const { rootFile, subDirFile } = appliedOptions
+  const {
+    rootFile,
+    subDirFile,
+    rootDirPostBuildOrder,
+    subDirPostBuildOrder,
+  } = appliedOptions;
 
-	if ( fs.existsSync( rootPath ) ) {
-		const pathStats = fs.statSync( rootPath )
-		if ( pathStats.isDirectory() ) {
-			// Get all sub directories
-			const subDirPaths = getDirectoryPaths( rootPath )
+  if (fs.existsSync(rootPath)) {
+    const pathStats = fs.statSync(rootPath);
+    if (pathStats.isDirectory()) {
+      // Get all sub directories
+      const subDirPaths = getDirectoryPaths(rootPath);
 
-			subDirPaths.forEach( ( dirPath ) => {
-				const { expanded, compressed } = glob.sync( path.join( dirPath, `/**/*${subDirFile.expanded.ext}` ) ).reduce(
-					( allContent, filePath ) => {
-						const fileContents = fs.readFileSync( filePath )
+      subDirPaths.forEach((dirPath) => {
+        const subDirFilesList = glob.sync(
+          path.join(dirPath, `/**/*${subDirFile.expanded.ext}`)
+        );
 
-						if ( !filePath.includes( subDirFile.name ) ) {
-							if ( filePath.includes( '.min.css' ) ) {
-								allContent.compressed += fileContents
-							} else {
-								allContent.expanded += fileContents
-							}
-						}
+        if (subDirFilesList.length !== 0) {
+          const {
+            expandedTop,
+            expandedBottom,
+            compressedTop,
+            compressedBottom,
+          } = subDirFilesList.reduce(
+            (allContent, filePath) => {
+              const fileContents = fs.readFileSync(filePath);
 
-						return allContent
-					},
-					{ expanded: '', compressed: '' }
-				)
+              if (!filePath.includes(subDirFile.name)) {
+                if (
+                  Array.isArray(subDirPostBuildOrder) &&
+                  subDirPostBuildOrder.length > 0
+                ) {
+                  subDirPostBuildOrder.forEach((order) => {
+                    if (filePath.includes(order.folder)) {
+                      if (order.sendTo === "top") {
+                        if (
+                          order.matchFiles === "*" ||
+                          order.matchFiles.test(path.parse(filePath).name) ||
+                          order.matchFiles === undefined
+                        ) {
+                          if (filePath.includes(".min.css")) {
+                            allContent.compressedTop += fileContents;
+                          } else {
+                            allContent.expandedTop += fileContents;
+                          }
+                        } else {
+                          if (filePath.includes(".min.css")) {
+                            allContent.compressedBottom += fileContents;
+                          } else {
+                            allContent.expandedBottom += fileContents;
+                          }
+                        }
+                      } else if (order.sendTo === "bottom") {
+                        if (
+                          order.matchFiles === "*" ||
+                          order.matchFiles.test(path.parse(filePath).name) ||
+                          order.matchFiles === undefined
+                        ) {
+                          if (filePath.includes(".min.css")) {
+                            allContent.compressedBottom += fileContents;
+                          } else {
+                            allContent.expandedBottom += fileContents;
+                          }
+                        } else {
+                          if (filePath.includes(".min.css")) {
+                            allContent.compressedTop += fileContents;
+                          } else {
+                            allContent.expandedTop += fileContents;
+                          }
+                        }
+                      }
+                    } else {
+                      if (filePath.includes(".min.css")) {
+                        allContent.compressedBottom += fileContents;
+                      } else {
+                        allContent.expandedBottom += fileContents;
+                      }
+                    }
+                  });
+                } else {
+                  if (filePath.includes(".min.css")) {
+                    allContent.compressedBottom += fileContents;
+                  } else {
+                    allContent.expandedBottom += fileContents;
+                  }
+                }
+              }
 
-				fs.writeFileSync( path.join( dirPath, subDirFile.name + subDirFile.expanded.ext ), expanded )
-				fs.writeFileSync( path.join( dirPath, subDirFile.name + subDirFile.compressed.prefix + subDirFile.expanded.ext ), compressed )
-			} )
+              return allContent;
+            },
+            {
+              expandedTop: "",
+              expandedBottom: "",
+              compressedTop: "",
+              compressedBottom: "",
+            }
+          );
 
-			const { expanded, compressed } = glob
-				.sync(
-					path.join(
-						rootPath,
-						`*/${subDirFile.name}.{${subDirFile.expanded.ext.replace( '.', '' )},${
-							subDirFile.compressed.prefix.replace( '.', '' ) + subDirFile.expanded.ext
-						}}`
-					)
-				)
-				.reduce(
-					( allContent, filePath ) => {
-						const fileContents = fs.readFileSync( filePath )
+          const expanded = expandedTop + expandedBottom;
+          const compressed = compressedTop + compressedBottom;
+          fs.writeFileSync(
+            path.join(dirPath, subDirFile.name + subDirFile.expanded.ext),
+            expanded
+          );
+          fs.writeFileSync(
+            path.join(
+              dirPath,
+              subDirFile.name +
+                subDirFile.compressed.prefix +
+                subDirFile.expanded.ext
+            ),
+            compressed
+          );
+        }
+      });
 
-						if ( filePath.includes( '.min.css' ) ) {
-							allContent.compressed += fileContents
-						} else {
-							allContent.expanded += fileContents
-						}
+      const mainFilePaths = glob.sync(
+        path.join(
+          rootPath,
+          `*/${subDirFile.name}.{${subDirFile.expanded.ext.replace(".", "")},${
+            subDirFile.compressed.prefix.replace(".", "") +
+            subDirFile.expanded.ext
+          }}`
+        )
+      );
 
-						return allContent
-					},
-					{ expanded: '', compressed: '' }
-				)
+      const {
+        expandedTop,
+        expandedBottom,
+        compressedTop,
+        compressedBottom,
+      } = mainFilePaths.reduce(
+        (allContent, filePath) => {
+          const fileContents = fs.readFileSync(filePath);
 
-			fs.writeFileSync( path.join( rootPath, rootFile.name + rootFile.expanded.ext ), expanded )
-			fs.writeFileSync( path.join( rootPath, rootFile.name + rootFile.compressed.prefix + rootFile.expanded.ext ), compressed )
-		}
-	}
-}
+          if (
+            Array.isArray(rootDirPostBuildOrder) &&
+            rootDirPostBuildOrder.length > 0
+          ) {
+            rootDirPostBuildOrder.forEach((order) => {
+              if (filePath.includes(order.folder)) {
+                if (order.sendTo === "top") {
+                  if (filePath.includes(".min.css")) {
+                    allContent.compressedTop += fileContents;
+                  } else {
+                    allContent.expandedTop += fileContents;
+                  }
+                } else if (order.sendTo === "bottom") {
+                  if (filePath.includes(".min.css")) {
+                    allContent.compressedBottom += fileContents;
+                  } else {
+                    allContent.expandedBottom += fileContents;
+                  }
+                }
+              } else {
+                if (filePath.includes(".min.css")) {
+                  allContent.compressedBottom += fileContents;
+                } else {
+                  allContent.expandedBottom += fileContents;
+                }
+              }
+            });
+          } else {
+            if (!filePath.includes(subDirFile.name)) {
+              if (filePath.includes(".min.css")) {
+                allContent.compressedBottom += fileContents;
+              } else {
+                allContent.expandedBottom += fileContents;
+              }
+            }
+          }
 
-module.exports = runPostBuild
+          return allContent;
+        },
+        {
+          expandedTop: "",
+          expandedBottom: "",
+          compressedTop: "",
+          compressedBottom: "",
+        }
+      );
+
+      const expanded = expandedTop + expandedBottom;
+      const compressed = compressedTop + compressedBottom;
+      fs.writeFileSync(
+        path.join(rootPath, rootFile.name + rootFile.expanded.ext),
+        expanded
+      );
+      fs.writeFileSync(
+        path.join(
+          rootPath,
+          rootFile.name + rootFile.compressed.prefix + rootFile.expanded.ext
+        ),
+        compressed
+      );
+    }
+  }
+};
+
+module.exports = runPostBuild;

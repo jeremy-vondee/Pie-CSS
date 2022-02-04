@@ -1,7 +1,5 @@
 .cards {
-    @include normalize;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    grid-gap: $sizeXLg;
-    align-items: stretch;
+    display: flex;
+    max-width: inherit;
+    flex-wrap: wrap;
 }

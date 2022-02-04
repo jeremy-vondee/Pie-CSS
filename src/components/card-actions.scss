@@ -1,1 +1,5 @@
-.card .card-actions {}
+.card-actions {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 $sizeMd $sizeSm $sizeMd;
+}

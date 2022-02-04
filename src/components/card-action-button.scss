@@ -1,8 +1,6 @@
-@import './button.scss';
-
 .card-btn,
 .card-button {
-    @extend .button;
+    @include button;
     padding: $sizeXs $sizeSm;
     margin-top: $sizeMd;
     margin-left: $sizeSm;

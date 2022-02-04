@@ -1,7 +1,5 @@
-@import './button.scss';
-
 .accordion {
-    @extend .button;
+    @include button;
     width: 100%;
     transition: 0.3s ease-out;
     text-align: left;
@@ -16,10 +14,11 @@
     }
     
     &.accordion-active {
-        background-color: darken($color: $color-dark, $amount: 30%);
+        background-color: darken($color: $color-dark, $amount: 20%);
         color: $color-white;
     }
 }
+
 .accordion-content {
     padding: 0 $sizeMd;
     overflow: hidden;

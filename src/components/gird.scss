@@ -1,0 +1,45 @@
+.gd-container,
+.grid-container {
+    display: grid;
+    grid-gap: 16px;
+    margin: 1%;
+}
+
+.col-container,
+.column-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 20px;
+}
+
+.rw-reverse,
+.row-reverse {
+    flex-direction: row-reverse;
+}
+
+.col-reverse,
+.column-reverse {
+    flex-direction: column-reverse;
+}
+
+.rw-container, 
+.row-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 16px;
+}
+
+$numbers: (one, two, three, four, five, six, seven, eight, nine, ten, eleven, twelve);
+@for $index from 1 through length($numbers) {
+    .grid-row-column-#{$index},
+    .gd-rw-col-#{$index} {
+        grid-template-columns: repeat($index, 1fr);
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .rw-container, 
+    .row-container {
+        grid-template-columns: 1fr;
+    }
+}

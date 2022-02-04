@@ -1,6 +1,32 @@
 .card-header {
-    text-align: center;
-    font-size: $sizeMd;
-    font-family: $is-segoe-ui;
-    font-weight: bold;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: $sizeSm;
+    & img {
+        width: $sizeLg;
+        height: $sizeLg;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    .user-info {
+        display: flex;
+        flex-direction: column;
+    }
+    .user-name {
+        font-weight: 500;
+        font-size: 14px;
+    }
+
+    .card-date {
+        font-size: 12px;
+        color: $color-dark;
+    }
+
+    .cd-hdr-icon,
+    .card-header-icon {
+        width: $sizeSm;
+        height: $sizeSm
+    }
 }

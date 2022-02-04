@@ -1,9 +1,4 @@
+.card-cont,
 .card-content {
-    word-wrap: break-word;
-    padding-left: $sizeSm;
-    padding-right: $sizeSm;
-    max-height: 350px;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+margin: $sizeSm;
 }
