@@ -3,6 +3,7 @@
     justify-content: space-around;
     align-items: center;
     padding: $sizeSm;
+
     & img {
         width: $sizeLg;
         height: $sizeLg;
@@ -26,7 +27,8 @@
 
     .cd-hdr-icon,
     .card-header-icon {
-        width: $sizeSm;
-        height: $sizeSm
+        width: $sizeMd;
+        height: $sizeMd;
+        cursor: pointer;
     }
 }

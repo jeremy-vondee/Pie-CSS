@@ -2,10 +2,15 @@
     text-decoration: none;
     font-family: $is-segoe-ui;
     color: $color-info;
+
+    &:hover {
+        text-decoration: underline;
+    }
 }
 
 .link-is-underlined {
     text-decoration: underline;
+    color: inherit;
 }
 
 .link-is-red {

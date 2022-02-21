@@ -1,4 +1,26 @@
 .card-cont,
 .card-content {
-margin: $sizeSm;
+  margin: $sizeSm;
+  max-height: 150px;
+  position: relative;
+  overflow: hidden;
+  transition: 0.4s;
+
+  .read-more {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    text-align: right;
+    cursor: pointer;
+  }
+
+  &.fullHeight {
+    overflow: auto;
+    max-height: fit-content;
+  }
+}
+
+.fullHeight {
+  transition: 0.5s;
 }

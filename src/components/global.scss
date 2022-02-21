@@ -4,11 +4,15 @@ html body {
 }
 
 .container {
-	margin: 50px $sizeLg;
+	margin: 100px $sizeLg;
 }
 
 .title {
 	text-align: center;
 	font-weight: bold;
 	width: 100%;
+}
+
+.is-bold {
+	font-weight: bold;
 }

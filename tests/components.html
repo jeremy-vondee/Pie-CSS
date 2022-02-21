@@ -1,223 +1,292 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Pie CSS: Component Test Document</title>
-		<!-- Import component styles -->
-		<link rel="stylesheet" href="../dist/components/index.css" />
-	</head>
-	<style>
-		.placeholder {
-    background-color: #ccc;
-    padding: 16px 64px;
-    border-radius: 4px;
-}
-	</style>
-	<body>
-		<div class="container">
-			<div class="cards">
-				<div class="card">
-					<div class="card-image">
-						<img src="./nathan-anderson-GgRMYjsEJ_s-unsplash.jpg" alt="">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Pie CSS: Component Test Document</title>
+	<!-- Import component styles -->
+	<link rel="stylesheet" rel="preload" href="../dist/components/index.min.css" />
+	<!-- <link rel="stylesheet" href="../fontawesome/css/all.min.css" /> -->
+</head>
+<style>
+	.placeholder {
+		background-color: #ccc;
+		padding: 16px 20px;
+		border-radius: 4px;
+	}
+</style>
+
+<body>
+	<header class="bg-red">
+		<div class="logo">
+			<img src="./nathan-anderson-GgRMYjsEJ_s-unsplash.jpg" alt="">
+		</div>
+		<div class="nav-menu">
+			<a href="#" class="nav-link">Home</a>
+			<a href="#" class="nav-link">About Us</a>
+			<a href="#" class="nav-link">Contact Us</a>
+
+		</div>
+		<div class="burger">
+			<div class="line1"></div>
+			<div class="line2"></div>
+			<div class="line3"></div>
+		</div>
+		</div>
+	</header>
+	<div class="container">
+		<div class="cards">
+			<div class="card">
+				<div class="card-header">
+					<img src="./nathan-anderson-GgRMYjsEJ_s-unsplash.jpg" alt="">
+					<div class="card-info">
+						<div class="user-name">Jhon Doe</div>
+						<div class="card-date">12 September, 2022</div>
 					</div>
-					<div class="card-content">
-						<h3 class="card-header">Something</h3>
-						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis adipisci voluptate ipsam aspernatur rem provident culpa similique! Ducimus, ipsum! Nemo ad accusamus doloribus! Soluta amet facilis nihil molestias nesciunt officiis.
-					</div>
-					<div class="card-actions">
-						<button class="button">Something</button>
-						<div class="card-icon"><i>&#8758;</i></div>
-					</div>
+					<i class="fas fa-chevron-up cd-hdr-icon"></i>
 				</div>
-				<div class="card">
-					<div class="card-image">
-						<img src="./nathan-anderson-GgRMYjsEJ_s-unsplash.jpg" alt="">
-					</div>
-					<div class="card-content">
-						<h3 class="card-header">Something</h3>
-						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis adipisci voluptate ipsam aspernatur rem provident culpa similique! Ducimus, ipsum! Nemo ad accusamus doloribus! Soluta amet facilis nihil molestias nesciunt officiis.
-					</div>
-					<div class="card-actions">
-						<button class="button">Something</button>
-						<div class="card-icon"><i>&#8758;</i></div>
-					</div>
+				<div class="card-image">
+					<img src="./nathan-anderson-GgRMYjsEJ_s-unsplash.jpg" alt="">
 				</div>
-				<div class="card">
-					<div class="card-image">
-						<img src="./nathan-anderson-GgRMYjsEJ_s-unsplash.jpg" alt="">
-					</div>
-					<div class="card-content">
-						<h3 class="card-header">Something</h3>
-						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis adipisci voluptate ipsam aspernatur rem provident culpa similique! Ducimus, ipsum! Nemo ad accusamus doloribus! Soluta amet facilis nihil molestias nesciunt officiis.
-					</div>
-					<div class="card-actions">
-						<button class="button">Something</button>
-						<div class="card-icon"><i>&#8758;</i></div>
-					</div>
+				<div class="card-content">
+					<h3 class="card-header">Something</h3>
+					<span>
+						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis adipisci voluptate ipsam
+						aspernatur rem provident culpa similique! Ducimus, ipsum! Nemo ad accusamus doloribus! Soluta
+						amet
+						facilis nihil molestias nesciunt officiis.
+					</span>
+					<span class="read-more"><span href="#">...</span></span>
 				</div>
-				<div class="card">
-					<div class="card-header">
-						<img src="./nathan-anderson-GgRMYjsEJ_s-unsplash.jpg" alt="">
-						<div class="card-info">
-							<div class="user-name">Jhon Doe</div>
-							<div class="card-date">12 September, 2022</div>
-						</div>
-					</div>
-					<div class="card-image">
-						<img src="./nathan-anderson-GgRMYjsEJ_s-unsplash.jpg" alt="">
-					</div>
-					<div class="card-content">
-						<h3 class="card-header">Something</h3>
-						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis adipisci voluptate ipsam aspernatur rem provident culpa similique! Ducimus, ipsum! Nemo ad accusamus doloribus! Soluta amet facilis nihil molestias nesciunt officiis.
-					</div>
-					<div class="card-actions">
-						<button class="button is-danger">Something</button>
-						<div class="card-icon"></div>
-					</div>
+				<div class="card-actions">
+					<button class="button">Something</button>
+					<div class="card-icon"><i class="fas fa-chevron-up"></i></div>
 				</div>
-				<div class="card">
-					<div class="card-content">
-						<h3 class="card-header">Something</h3>
-						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis adipisci voluptate ipsam aspernatur rem provident culpa similique! Ducimus, ipsum! Nemo ad accusamus doloribus! Soluta amet facilis nihil molestias nesciunt officiis
-					</div>
+			</div>
+			<div class="card">
+				<div class="card-image">
+					<img src="./nathan-anderson-GgRMYjsEJ_s-unsplash.jpg" alt="">
 				</div>
+				<div class="card-header">
+					<img src="./nathan-anderson-GgRMYjsEJ_s-unsplash.jpg" alt="">
+					<div class="card-info">
+						<div class="user-name">Jhon Doe</div>
+						<div class="card-date">12 September, 2022</div>
+					</div>
+					<i class="fas fa-chevron-up cd-hdr-icon"></i>
+				</div>
+				<div class="card-content">
+					<h3 class="card-header">Something</h3>
+					<span>
+						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis adipisci voluptate ipsam
+						aspernatur rem provident culpa similique! Ducimus, ipsum! Nemo ad accusamus doloribus! Soluta
+						amet
+						facilis nihil molestias nesciunt officiis.
+					</span>
+					<span class="read-more"><span href="#">...</span></span>
+				</div>
+				<div class="card-actions">
+					<button class="button">Something</button>
+					<div class="card-icon"><i class="fas fa-chevron-up"></i></div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header">
+					<img src="./nathan-anderson-GgRMYjsEJ_s-unsplash.jpg" alt="">
+					<div class="card-info">
+						<div class="user-name">Jhon Doe</div>
+						<div class="card-date">12 September, 2022</div>
+					</div>
+					<i class="fas fa-chevron-up cd-hdr-icon"></i>
+				</div>
+				<div class="card-image">
+					<img src="./nathan-anderson-GgRMYjsEJ_s-unsplash.jpg" alt="">
+				</div>
+				<div class="card-content">
+					<h3 class="card-header">Something</h3>
+					<span>
+						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis adipisci voluptate ipsam
+						aspernatur rem provident culpa similique! Ducimus, ipsum! Nemo ad accusamus doloribus! Soluta
+						amet
+						facilis nihil molestias nesciunt officiis.
+					</span>
+					<span class="read-more"><span href="#">...</span></span>
+				</div>
+				<div class="card-actions">
+					<button class="button">Something</button>
+					<div class="card-icon"><i class="fas fa-chevron-up"></i></div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header">
+					<img src="./nathan-anderson-GgRMYjsEJ_s-unsplash.jpg" alt="">
+					<div class="card-info">
+						<div class="user-name">Jhon Doe</div>
+						<div class="card-date">12 September, 2022</div>
+					</div>
+					<i class="fas fa-chevron-up cd-hdr-icon"></i>
+				</div>
+				<div class="card-image">
+					<img src="./nathan-anderson-GgRMYjsEJ_s-unsplash.jpg" alt="">
+				</div>
+				<div class="card-content">
+					<h3 class="card-header">Something</h3>
+					<span>
+						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis adipisci voluptate ipsam
+						aspernatur rem provident culpa similique! Ducimus, ipsum! Nemo ad accusamus doloribus! Soluta
+						amet
+						facilis nihil molestias nesciunt officiis.
+					</span>
+					<span class="read-more"><span href="#">...</span></span>
+				</div>
+				<div class="card-actions">
+					<button class="button is-danger">Something</button>
+					<div class="card-icon"><i class="fas fa-chevron-up"></i></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<a href="#" class="link link-is-danger">lorem</a>
+		<a href="#" class="button">lorem</a>
+		<a href="#" class="link link-is-underlined">lorem</a>
+	</div>
+	<div class="container">
+		<button class="accordion">
+			Accordion
+		</button>
+		<div class="accordion-content">
+			<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur, molestiae!</p>
+		</div>
+		<button class="accordion">
+			Accordion
+		</button>
+		<div class="accordion-content">
+			<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur, molestiae!</p>
+		</div>
+	</div>
+	<hr class="divider">
+	<span class="material-icons icon-is-64px color-red">apple</span>
+
+	<div class="container">
+		<div class="gd-container">
+			<div class="rw-container gd-rw-col-1">
+				<div class="placeholder"></div>
+			</div>
+			<div class="rw-container gd-rw-col-2">
+				<div class="placeholder"></div>
+				<div class="placeholder"></div>
+			</div>
+			<div class="rw-container gd-rw-col-3">
+				<div class="placeholder"></div>
+				<div class="placeholder"></div>
+				<div class="placeholder"></div>
+			</div>
+			<div class="rw-container gd-rw-col-4">
+				<div class="placeholder"></div>
+				<div class="placeholder"></div>
+				<div class="placeholder"></div>
+				<div class="placeholder"></div>
+			</div>
+			<div class="rw-container gd-rw-col-5">
+				<div class="placeholder"></div>
+				<div class="placeholder"></div>
+				<div class="placeholder"></div>
+				<div class="placeholder"></div>
+				<div class="placeholder"></div>
+			</div>
+			<div class="rw-container gd-rw-col-6">
+				<div class="placeholder"></div>
+				<div class="placeholder"></div>
+				<div class="placeholder"></div>
+				<div class="placeholder"></div>
+				<div class="placeholder"></div>
+				<div class="placeholder"></div>
+			</div>
+			<div class="rw-container gd-rw-col-7">
+				<div class="placeholder"></div>
+				<div class="placeholder"></div>
+				<div class="placeholder"></div>
+				<div class="placeholder"></div>
+				<div class="placeholder"></div>
+				<div class="placeholder"></div>
+				<div class="placeholder"></div>
+			</div>
+			<div class="rw-container gd-rw-col-8">
+				<div class="placeholder"></div>
+				<div class="placeholder"></div>
+				<div class="placeholder"></div>
+				<div class="placeholder"></div>
+				<div class="placeholder"></div>
+				<div class="placeholder"></div>
+				<div class="placeholder"></div>
+				<div class="placeholder"></div>
+			</div>
+			<div class="rw-container gd-rw-col-9">
+				<div class="placeholder"></div>
+				<div class="placeholder"></div>
+				<div class="placeholder"></div>
+				<div class="placeholder"></div>
+				<div class="placeholder"></div>
+				<div class="placeholder"></div>
+				<div class="placeholder"></div>
+				<div class="placeholder"></div>
+				<div class="placeholder"></div>
+			</div>
+			<div class="rw-container gd-rw-col-10">
+				<div class="placeholder"></div>
+				<div class="placeholder"></div>
+				<div class="placeholder"></div>
+				<div class="placeholder"></div>
+				<div class="placeholder"></div>
+				<div class="placeholder"></div>
+				<div class="placeholder"></div>
+				<div class="placeholder"></div>
+				<div class="placeholder"></div>
+				<div class="placeholder"></div>
+			</div>
+			<div class="rw-container gd-rw-col-11">
+				<div class="placeholder"></div>
+				<div class="placeholder"></div>
+				<div class="placeholder"></div>
+				<div class="placeholder"></div>
+				<div class="placeholder"></div>
+				<div class="placeholder"></div>
+				<div class="placeholder"></div>
+				<div class="placeholder"></div>
+				<div class="placeholder"></div>
+				<div class="placeholder"></div>
+				<div class="placeholder"></div>
+			</div>
+			<div class="rw-container gd-rw-col-12">
+				<div class="placeholder"></div>
+				<div class="placeholder"></div>
+				<div class="placeholder"></div>
+				<div class="placeholder"></div>
+				<div class="placeholder"></div>
+				<div class="placeholder"></div>
+				<div class="placeholder"></div>
+				<div class="placeholder"></div>
+				<div class="placeholder"></div>
+				<div class="placeholder"></div>
+				<div class="placeholder"></div>
+				<div class="placeholder"></div>
 			</div>
 		</div>
 		<div class="container">
-			<a href="#" class="link link-is-danger">lorem</a>
+			<img src="./nathan-anderson-GgRMYjsEJ_s-unsplash.jpg" class="is-56x56" alt="">
+			<img src="./nathan-anderson-GgRMYjsEJ_s-unsplash.jpg" class="is-56x56" alt="">
 		</div>
-		<header class="bg-blue">
-			<div class="logo">
-				<img src="./nathan-anderson-GgRMYjsEJ_s-unsplash.jpg" alt="">
-			</div>
-			<div class="nav-menu">
-				<a href="#" class="nav-link">Home</a>
-				<a href="#" class="nav-link">About Us</a>
-				<a href="#" class="nav-link">Contact Us</a>
-			</div>
-			<div class="burger">
-				<div class="line1"></div>
-				<div class="line2"></div>
-				<div class="line3"></div>
-			</div>
-		</div>
-		</header>
-		<div class="container">
-			<button class="accordion">
-				Accordion
-			</button>
-			<div class="accordion-content">
-				<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur, molestiae!</p>
-			</div>
-			<button class="accordion">
-				Accordion
-			</button>
-			<div class="accordion-content">
-				<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur, molestiae!</p>
-			</div>
-		</div>
-		<div class="container">
-			<div class="gd-container">
-				<div class="rw-container gd-rw-col-1">
-					<div class="placeholder"></div>
-				</div>
-				<div class="rw-container gd-rw-col-2">
-					<div class="placeholder"></div>
-					<div class="placeholder"></div>
-				</div>
-				<div class="rw-container gd-rw-col-3">
-					<div class="placeholder"></div>
-					<div class="placeholder"></div>
-					<div class="placeholder"></div>
-				</div>
-				<div class="rw-container gd-rw-col-4">
-					<div class="placeholder"></div>
-					<div class="placeholder"></div>
-					<div class="placeholder"></div>
-					<div class="placeholder"></div>
-				</div>
-				<div class="rw-container gd-rw-col-5">
-					<div class="placeholder"></div>
-					<div class="placeholder"></div>
-					<div class="placeholder"></div>
-					<div class="placeholder"></div>
-					<div class="placeholder"></div>
-				</div>
-				<div class="rw-container gd-rw-col-6">
-					<div class="placeholder"></div>
-					<div class="placeholder"></div>
-					<div class="placeholder"></div>
-					<div class="placeholder"></div>
-					<div class="placeholder"></div>
-					<div class="placeholder"></div>
-				</div>
-				<div class="rw-container gd-rw-col-7">
-					<div class="placeholder"></div>
-					<div class="placeholder"></div>
-					<div class="placeholder"></div>
-					<div class="placeholder"></div>
-					<div class="placeholder"></div>
-					<div class="placeholder"></div>
-					<div class="placeholder"></div>
-				</div>
-				<div class="rw-container gd-rw-col-8">
-					<div class="placeholder"></div>
-					<div class="placeholder"></div>
-					<div class="placeholder"></div>
-					<div class="placeholder"></div>
-					<div class="placeholder"></div>
-					<div class="placeholder"></div>
-					<div class="placeholder"></div>
-				</div>
-				<div class="rw-container gd-rw-col-9">
-					<div class="placeholder"></div>
-					<div class="placeholder"></div>
-					<div class="placeholder"></div>
-					<div class="placeholder"></div>
-					<div class="placeholder"></div>
-					<div class="placeholder"></div>
-					<div class="placeholder"></div>
-					<div class="placeholder"></div>
-				</div>
-				<div class="rw-container gd-rw-col-10">
-					<div class="placeholder"></div>
-					<div class="placeholder"></div>
-					<div class="placeholder"></div>
-					<div class="placeholder"></div>
-					<div class="placeholder"></div>
-					<div class="placeholder"></div>
-					<div class="placeholder"></div>
-					<div class="placeholder"></div>
-					<div class="placeholder"></div>
-				</div>
-				<div class="rw-container gd-rw-col-11">
-					<div class="placeholder"></div>
-					<div class="placeholder"></div>
-					<div class="placeholder"></div>
-					<div class="placeholder"></div>
-					<div class="placeholder"></div>
-					<div class="placeholder"></div>
-					<div class="placeholder"></div>
-					<div class="placeholder"></div>
-					<div class="placeholder"></div>
-					<div class="placeholder"></div>
-				</div>
-				<div class="rw-container gd-rw-col-12">
-					<div class="placeholder"></div>
-					<div class="placeholder"></div>
-					<div class="placeholder"></div>
-					<div class="placeholder"></div>
-					<div class="placeholder"></div>
-					<div class="placeholder"></div>
-					<div class="placeholder"></div>
-					<div class="placeholder"></div>
-					<div class="placeholder"></div>
-					<div class="placeholder"></div>
-				</div>
-		</div>
-		<a href="#home" id="back-home" class="back-home is-blue" onclick="scrollUp()"></a>
-	</body>
-	<script src="../src/components/Js/index.js"></script>
+		<a href="#home" id="back-home" class="back-home is-blue" onclick="scrollUp()">
+			<span class="material-icons">expand_less</span></a>
+</body>
+<script src="../src/components/Js/accordion.js"></script>
+<script src="../src/components/Js/back-to-top.js"></script>
+<script src="../src/components/Js/navbar.js"></script>
+<script src="../src/components/Js/card-truncate.js"></script>
+
+<!-- <script src="../fontawesome/js/all.min.js"></script> -->
+
 </html>

@@ -1,8 +1,9 @@
-$imageSizes: (24, 32, 40,  48, 56, 64, 72, 80, 88, 96, 104, 114, 120, 128);
+$imageSizes: (24, 32, 40, 48, 56, 64, 72, 80, 88, 96, 104, 114, 120, 128);
 @each $size in $imageSizes {
-    img .is-#{$size}x#{$size} {
-        width: $size + px;
-        height: $size + px;
-        object-fit: cover;
-    }
+  img.is-#{$size}x#{$size} {
+    width: $size + px;
+    height: $size + px;
+    object-fit: cover;
+    object-position: contain;
+  }
 }

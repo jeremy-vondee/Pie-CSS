@@ -1,40 +1,44 @@
 .card {
-    flex-basis: calc(25% - $sizeXLg);
-    margin: $sizeMd;
-    box-shadow: $shadow-6;
+  flex-basis: calc(25% - $sizeXLg);
+  margin: $sizeMd;
+  box-shadow: $shadow-6;
+
+  &:nth-last-child(1) {
+    align-items: flex-end;
+  }
 }
 
 @media screen and (max-width: 500px) {
-    .card {
-        flex-basis: 100%;
-        margin-left: 0;
-        margin-right: 0;
-    }
+  .card {
+    flex-basis: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 
 @media screen and (max-width: 740px) and (min-width: 501px) {
-    .card {
-        flex-basis: calc(50% - $sizeMd);
-    }
+  .card {
+    flex-basis: calc(50% - $sizeMd);
+  }
 
-    .card:nth-child(even) {
-        margin-right: 0;
-        margin-left: $sizeSm;
-        margin-top: $sizeSm;
-        margin-bottom: $sizeSm;
-    }
+  .card:nth-child(even) {
+    margin-right: 0;
+    margin-left: $sizeSm;
+    margin-top: $sizeSm;
+    margin-bottom: $sizeSm;
+  }
 
-    .card:nth-child(odd) {
-        margin-left: 0;
-        margin-right: $sizeSm;
-        margin-top: $sizeSm;
-        margin-bottom: $sizeSm;
-    }
+  .card:nth-child(odd) {
+    margin-left: 0;
+    margin-right: $sizeSm;
+    margin-top: $sizeSm;
+    margin-bottom: $sizeSm;
+  }
 }
 
 @media screen and (max-width: 940px) and (min-width: 741px) {
-    .card {
-        flex-basis: calc(33.33% - $sizeMd);
-        margin: $sizeSm;
-    }
+  .card {
+    flex-basis: calc(33.33% - $sizeMd);
+    margin: $sizeSm;
+  }
 }

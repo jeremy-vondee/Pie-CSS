@@ -1,248 +1,248 @@
 .btn,
 .button {
-	@include button;
+  @include button;
 }
 
 .is-red {
-	background-color: $color-red;
-	color: $color-white;
-	&:hover {
-		background-color: darken($color: $color-red, $amount: 10%);
-		color:  $color-white;
-	}
+  background-color: $color-red;
+  color: $color-white;
+  &:hover {
+    background-color: darken($color: $color-red, $amount: 10%);
+    color: $color-white;
+  }
 }
 
 .is-green {
-	background-color: $color-green;
-	color: $color-white;
-	&:hover {
-		background:  darken($color: $color-green, $amount: 10%);
-		color:  $color-white;
-	}
+  background-color: $color-green;
+  color: $color-white;
+  &:hover {
+    background: darken($color: $color-green, $amount: 10%);
+    color: $color-white;
+  }
 }
 
 .is-blue {
-	background-color: $color-blue;
-	color: $color-white;
-	&:hover {
-		background:  darken($color: $color-blue, $amount: 10%);
-		color:  $color-white;
-	}
+  background-color: $color-blue;
+  color: $color-white;
+  &:hover {
+    background: darken($color: $color-blue, $amount: 10%);
+    color: $color-white;
+  }
 }
 
 .is-success {
-	background-color: $color-success;
-	color: $color-white;
-	&:hover {
-		background: darken($color: $color-success, $amount: 10%);
-		color:  $color-white;
-	}
+  background-color: $color-success;
+  color: $color-white;
+  &:hover {
+    background: darken($color: $color-success, $amount: 10%);
+    color: $color-white;
+  }
 }
 
 .is-danger {
-	background-color: $color-danger;
-	color: $color-white;
-	&:hover {
-		background:  darken($color: $color-danger, $amount: 10%);
-		color:  $color-white;
-	}
+  background-color: $color-danger;
+  color: $color-white;
+  &:hover {
+    background: darken($color: $color-danger, $amount: 10%);
+    color: $color-white;
+  }
 }
 
 .is-warning {
-	background-color: $color-warning;
-	color: $color-white;
-	&:hover {
-		background:  darken($color: $color-warning, $amount: 10%);
-		color:  $color-white;
-	}
+  background-color: $color-warning;
+  color: $color-white;
+  &:hover {
+    background: darken($color: $color-warning, $amount: 10%);
+    color: $color-white;
+  }
 }
 
 .is-info {
-	background-color: $color-info;
-	color: $color-white;
-	&:hover {
-		background-color:  darken($color: $color-info, $amount: 10%);
-		color:  $color-white;
-	}
+  background-color: $color-info;
+  color: $color-white;
+  &:hover {
+    background-color: darken($color: $color-info, $amount: 10%);
+    color: $color-white;
+  }
 }
 
 .is-pink {
-	background-color: $color-pink;
-	color: $color-white;
-	&:hover {
-		background: darken($color: $color-pink, $amount: 10%);
-		color:  $color-white;
-	}
+  background-color: $color-pink;
+  color: $color-white;
+  &:hover {
+    background: darken($color: $color-pink, $amount: 10%);
+    color: $color-white;
+  }
 }
 
 .is-purple {
-	background-color: $color-purple;
-	color: $color-white;
-	&:hover {
-		background:  darken($color: $color-purple, $amount: 10%);
-		color:  $color-white;
-	}
+  background-color: $color-purple;
+  color: $color-white;
+  &:hover {
+    background: darken($color: $color-purple, $amount: 10%);
+    color: $color-white;
+  }
 }
 
 .is-deep-purple {
-	background-color: $color-deep-purple;
-	color: $color-white;
-	&:hover {
-		background:  darken($color: $color-deep-purple, $amount: 10%);
-		color:  $color-white;
-	}
+  background-color: $color-deep-purple;
+  color: $color-white;
+  &:hover {
+    background: darken($color: $color-deep-purple, $amount: 10%);
+    color: $color-white;
+  }
 }
 
 .is-light-blue {
-	background-color: $color-light-blue;
-	color: $color-white;
-	&:hover {
-		background:  darken($color: $color-light-blue, $amount: 10%);
-		color:  $color-white;
-	}
+  background-color: $color-light-blue;
+  color: $color-white;
+  &:hover {
+    background: darken($color: $color-light-blue, $amount: 10%);
+    color: $color-white;
+  }
 }
 
 .is-cyan {
-	background-color: $color-cyan;
-	color: $color-white;
-	&:hover {
-		background:  darken($color: $color-cyan, $amount: 10%);
-		color:  $color-white;
-	}
+  background-color: $color-cyan;
+  color: $color-white;
+  &:hover {
+    background: darken($color: $color-cyan, $amount: 10%);
+    color: $color-white;
+  }
 }
 
 .is-teal {
-	background-color: $color-teal;
-	color: $color-white;
-	&:hover {
-		background:  darken($color: $color-teal, $amount: 10%);
-		color:  $color-white;
-	}
+  background-color: $color-teal;
+  color: $color-white;
+  &:hover {
+    background: darken($color: $color-teal, $amount: 10%);
+    color: $color-white;
+  }
 }
 
 .is-light-green {
-	background-color: $color-light-green;
-	color: $color-white;
-	&:hover {
-		background:  darken($color: $color-light-green, $amount: 10%);
-		color:  $color-light-green;
-	}
+  background-color: $color-light-green;
+  color: $color-white;
+  &:hover {
+    background: darken($color: $color-light-green, $amount: 10%);
+    color: $color-light-green;
+  }
 }
 
 .is-lime {
-	background-color: $color-lime;
-	color: $color-white;
-	&:hover {
-		background:  darken($color: $color-lime, $amount: 10%);
-		color:  $color-white;
-	}
+  background-color: $color-lime;
+  color: $color-white;
+  &:hover {
+    background: darken($color: $color-lime, $amount: 10%);
+    color: $color-white;
+  }
 }
 
 .is-yellow {
-	background-color: $color-yellow;
-	color: $color-white;
-	&:hover {
-		background: darken($color: $color-yellow, $amount: 10%);
-		color:  $color-white;
-	}
+  background-color: $color-yellow;
+  color: $color-white;
+  &:hover {
+    background: darken($color: $color-yellow, $amount: 10%);
+    color: $color-white;
+  }
 }
 
 .is-amber {
-	background-color: $color-amber;
-	color: $color-white;
-	&:hover {
-		background:  darken($color: $color-amber, $amount: 10%);
-		color:  $color-white;
-	}
+  background-color: $color-amber;
+  color: $color-white;
+  &:hover {
+    background: darken($color: $color-amber, $amount: 10%);
+    color: $color-white;
+  }
 }
 
 .is-orange {
-	background-color: $color-orange;
-	color: $color-white;
-	&:hover {
-		background:  darken($color: $color-orange, $amount: 10%);
-		color:  $color-white;
-	}
+  background-color: $color-orange;
+  color: $color-white;
+  &:hover {
+    background: darken($color: $color-orange, $amount: 10%);
+    color: $color-white;
+  }
 }
 
 .is-deep-orange {
-	background-color: $color-deep-orange;
-	color: $color-white;
-	&:hover {
-		background:  darken($color: $color-deep-orange, $amount: 10%);
-		color:  $color-white;
-	}
+  background-color: $color-deep-orange;
+  color: $color-white;
+  &:hover {
+    background: darken($color: $color-deep-orange, $amount: 10%);
+    color: $color-white;
+  }
 }
 
 .is-brown {
-	background-color: $color-brown;
-	color: $color-white;
-	&:hover {
-		background:  darken($color: $color-brown, $amount: 10%);
-		color:  $color-white;
-	}
+  background-color: $color-brown;
+  color: $color-white;
+  &:hover {
+    background: darken($color: $color-brown, $amount: 10%);
+    color: $color-white;
+  }
 }
 
 .is-grey {
-	background-color: $color-grey;
-	color: $color-white;
-	&:hover {
-		background:  darken($color: $color-grey, $amount: 10%);
-		color:  $color-white;
-	}
+  background-color: $color-grey;
+  color: $color-white;
+  &:hover {
+    background: darken($color: $color-grey, $amount: 10%);
+    color: $color-white;
+  }
 }
 
 .is-blue-grey {
-	background-color: $color-blue-grey;
-	color: $color-white;
-	&:hover {
-		background:  darken($color: $color-blue-grey, $amount: 10%);
-		color:  $color-white;
-	}
+  background-color: $color-blue-grey;
+  color: $color-white;
+  &:hover {
+    background: darken($color: $color-blue-grey, $amount: 10%);
+    color: $color-white;
+  }
 }
 
 .is-black {
-	background-color: $color-black;
-	color: $color-white;
-	&:hover {
-		background:  darken($color: $color-black, $amount: 10%);
-		color:  $color-white;
-	}
+  background-color: $color-black;
+  color: $color-white;
+  &:hover {
+    background: darken($color: $color-black, $amount: 10%);
+    color: $color-white;
+  }
 }
 
 .is-dark {
-	background-color: $color-dark;
-	color: $color-white;
-	&:hover {
-		background:  darken($color: $color-dark, $amount: 10%);
-		color:  $color-white;
-	}
+  background-color: $color-dark;
+  color: $color-white;
+  &:hover {
+    background: darken($color: $color-dark, $amount: 10%);
+    color: $color-white;
+  }
 }
 
 .icon-btn,
 .icon-button {
-	@extend .button;
-	width: 50px;
-	height: 50px;
+  @extend .button;
+  width: 50px;
+  height: 50px;
 }
 
 .is-circular {
-	@extend .icon-btn;
-	border-radius: 50%;
-	padding: $sizeSm;
+  @extend .icon-btn;
+  border-radius: 50%;
+  padding: $sizeSm;
 }
 
 .social-button {
-	@extend .button;
-	font-weight:400;
-	font-size: $sizeMd;
-	& img {
-		width: 15px;
-		height: 15px;
-		margin-right: $sizeXs;
-	}
+  @extend .button;
+  font-weight: 400;
+  font-size: $sizeMd;
+  & img {
+    width: 15px;
+    height: 15px;
+    margin-right: $sizeXs;
+  }
 }
 
 .float-right {
-	@include float-direction;
+  @include float-direction;
 }
