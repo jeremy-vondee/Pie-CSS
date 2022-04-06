@@ -1,47 +1,47 @@
 form {
-    font-family: $is-segoe-ui;
-    display :flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-around;
+  font-family: $is-montserrat;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
 
-    & input {
-        border-radius: $sizeSm;
-        margin-top: $sizeXs;
-        padding: $sizeMd 0 $sizeMd $sizeMd;
-        border: none;
-        background-color: lighten($color: $color-grey, $amount: 30%);
-        outline: none;
+  & input {
+    border-radius: $sizeSm;
+    margin-top: $sizeXs;
+    padding: $sizeMd 0 $sizeMd $sizeMd;
+    border: none;
+    background-color: lighten($color: $color-grey, $amount: 30%);
+    outline: none;
 
-        &.has-border-bottom {
-            border-bottom: 1px solid $color-grey;
-            background-color: $color-white;
-            border-radius: 0;
-            padding-top: $sizeXs;
-            padding-bottom: $sizeXs;
-            padding-left: 0;
-        }
+    &.has-border-bottom {
+      border-bottom: 1px solid $color-grey;
+      background-color: $color-white;
+      border-radius: 0;
+      padding-top: $sizeXs;
+      padding-bottom: $sizeXs;
+      padding-left: 0;
     }
+  }
 
-    .#{&}-btn,
-    .#{&}-button {
-        @include button;
-        margin-top: $sizeSm;
-    }
+  .#{&}-btn,
+  .#{&}-button {
+    @include button;
+    margin-top: $sizeSm;
+  }
 
-    label {
-        margin-top: $sizeXs;
-    }
+  label {
+    margin-top: $sizeXs;
+  }
 }
 
 .is-fullwidth {
-    width: 100%;
+  width: 100%;
 }
 
 @media screen and (max-width: 500px) {
-    form {
-        & input {
-            width: 100%;
-        }
+  form {
+    & input {
+      width: 100%;
     }
+  }
 }

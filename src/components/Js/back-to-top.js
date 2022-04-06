@@ -7,7 +7,7 @@ function scrollFunction() {
     document.body.scrollTop > 500 ||
     document.documentElement.scrollTop > 500
   ) {
-    scrollup.style.display = "inline-block";
+    scrollup.style.display = "flex";
   } else {
     scrollup.style.display = "none";
   }

@@ -18,7 +18,7 @@ let currentBuildPath = null
 const removeDistDirectory = () => {
 	try {
 		printActionMessage( 'info', 'remove', 'Removing `dist` folder...' )
-		fs.rmSync( paths.DIST, { recursive: true, force: true } )
+		fs.rmdirSync( paths.DIST, { recursive: true, force: true } )
 		printActionMessage( 'success', 'done', 'Successfully removed `dist` folder!' )
 		printDivider( '•', 70, { textColor: 'grey' } )
 	} catch ( error ) {
@@ -28,7 +28,7 @@ const removeDistDirectory = () => {
 }
 
 const printHelpMessage = () => {
-	printDivider( '•', 70, { textColor: 'grey' } )
+	printDividerurl( '•', 70, { textColor: 'grey' } )
 	printMessage( 'The available commands are: ', { startLine: true, endLine: true } )
 	printActionMessage( 'info', 'command', 'Type `help` to display this message.' )
 	printActionMessage( 'info', 'command', 'Type `rs` or `restart` to restart the watcher.' )

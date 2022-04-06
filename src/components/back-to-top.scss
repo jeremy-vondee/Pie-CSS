@@ -16,7 +16,11 @@ body {
     right: 0;
     margin-right: $sizeXLg;
     display: none;
-    width: $sizeXLg;
-    height: $sizeXLg;
+    width: max-content;
+    height: max-content;
     @extend .float-right;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+    padding: 4px;
 }

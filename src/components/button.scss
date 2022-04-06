@@ -228,6 +228,11 @@
 
 .is-circular {
   @extend .icon-btn;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  vertical-align: middle;
   border-radius: 50%;
   padding: $sizeSm;
 }
@@ -236,10 +241,18 @@
   @extend .button;
   font-weight: 400;
   font-size: $sizeMd;
-  & img {
-    width: 15px;
-    height: 15px;
-    margin-right: $sizeXs;
+  vertical-align: middle;
+  padding: $sizeSm;
+  & .social-icon {
+    text-align: center;
+    margin-right: $sizeSm;
+
+    & img {
+      width: 15px;
+      height: 15px;
+      margin-right: $sizeXs;
+      vertical-align: middle;
+    }
   }
 }
 

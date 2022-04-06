@@ -2,8 +2,7 @@
   font-family: "Material Icons";
   font-style: normal;
   font-weight: 400;
-  src: url("../../material icons/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2")
-    format("woff2");
+  src: url("../../material icons/a3e4b8576868d394c1da.woff2") format("woff2");
 }
 
 .material-icons {
@@ -11,6 +10,8 @@
   font-weight: normal;
   font-style: normal;
   font-size: 24px;
+  height: 24px;
+  width: 24px;
   line-height: 1;
   letter-spacing: normal;
   text-transform: none;
@@ -22,10 +23,16 @@
   -webkit-font-smoothing: antialiased;
 }
 
+.icon-is-centered {
+  text-align: center;
+  vertical-align: middle;
+}
+
 $fontSize: (8px, 16px, 24px, 32px, 64px);
 @each $iconSize in $fontSize {
   .icon-is-#{$iconSize} {
     font-size: $iconSize;
-    text-align: center;
+    width: $iconSize;
+    height: $iconSize;
   }
 }

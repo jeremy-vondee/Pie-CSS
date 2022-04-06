@@ -25,3 +25,9 @@ $is-segoe-ui: 'Segoe UI';
 	margin-right: $sizeMd;
 }
 
+@mixin card {
+    flex-basis: calc(25% - $sizeXLg);
+    margin: $sizeMd;
+    box-shadow: $shadow-6;
+}
+

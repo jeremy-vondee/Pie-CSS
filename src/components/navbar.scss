@@ -1,117 +1,132 @@
-@import "../colors/backgrounds.scss";
 @import "../components/link.scss";
 @import "../misc/elevation.scss";
 
 header {
-    @include normalize;
+  @include normalize;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 $sizeXLg;
+  @extend .elev-20;
+  transition: all 0.3s ease-in-out;
+  position: fixed;
+  top: 0;
+  height: 50px;
+  background-color: transparent;
+  color: $color-white;
+
+  & .nav-pan,
+  .nav-panel {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    padding: 0 $sizeXLg;
-    @extend .elev-20;
-    transition: all 0.3s ease-in-out;
-    position: fixed;
-    top: 0;
-    height: 72px;
+    justify-content: flex-end;
+    cursor: pointer;
+
+    & :not(nav-menu) {
+      margin-left: $sizeSm;
+    }
+  }
 }
 
+.sticky {
+  background-color: $color-danger;
+  height: 50px;
+}
 .logo {
-    width: $sizeXLg;
-    height: $sizeXLg;
+  width: $sizeXLg;
+  height: $sizeXLg;
 
-    & img {
-        width: inherit;
-        height: inherit;
-        object-fit: cover;
-    }
+  & img {
+    width: inherit;
+    height: inherit;
+    object-fit: cover;
+  }
 }
 
 .nav-menu {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 50%;
-    @extend .elev-11;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  @extend .elev-11;
 
-    .nav-link {
-        @extend .link;
-        color: $color-white;
-    }
+  .nav-link {
+    @extend .link;
+    color: inherit;
+  }
 }
 
 .burger {
-    display: none;
+  display: none;
 }
 
 .burger div {
-    width: 25px;
-    height: 3px;
-    background: $color-white;
-    margin: 5px;
-    transition: all 0.3s ease-in;
+  width: 25px;
+  height: 3px;
+  background: $color-white;
+  margin: 5px;
+  transition: all 0.3s ease-in;
 }
 
-@media screen and (max-width: 947px) { 
-    body {
-        overflow-x: hidden;
+@media screen and (max-width: 947px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .nav-menu {
+    background: $color-white;
+    position: fixed;
+    top: 50px;
+    bottom: 0px;
+    right: 0px;
+    width: 100%;
+    height: fit-content;
+    transform: translateY(calc(-100vh - 50px));
+    transition: transform 0.3s ease-in-out;
+    flex-direction: column;
+    justify-content: unset;
+
+    &.nav-active {
+      transform: translateY(0%);
     }
 
-    .nav-menu {
-        background: $color-white;
-        position: fixed;
-        top: 72px;
-        bottom: 0px;
-        right: 0px;
-        width: 100%;
-        height: fit-content;
-        transform: translateY(calc(-100vh - 72px));
-        transition: transform 0.3s ease-in-out;
-        flex-direction: column;
-        justify-content: unset;
+    .nav-link {
+      padding: 5px 0;
+      color: $color-black;
+      border-bottom: 1px solid $color-grey;
+      width: 80%;
+      text-align: center;
 
-        &.nav-active {
-            transform: translateY(0%);
-        }
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+  }
 
-        .nav-link {
-            padding: 5px 0;
-            color: $color-black;
-            border-bottom: 1px solid $color-grey;
-            width: 80%;
-            text-align: center;
-
-            &:last-child {
-                border-bottom: none;
-            }
-        }
+  @keyframes navLinkFade {
+    from {
+      transform: translateY(-50px);
     }
 
-    @keyframes navLinkFade {
-        from {
-            transform: translateY(-50px);
-        }
-
-        to {
-            transition: .5s;
-            transform: translateY(0px);
-        }
+    to {
+      transition: 0.5s;
+      transform: translateY(0px);
     }
+  }
 
-    .burger {
-        display: block;
-        cursor: pointer;
-    }
+  .burger {
+    display: block;
+    cursor: pointer;
+  }
 
-    .toggle .line1 {
-        transform: rotate(-45deg) translate(-5px, 6px);
-    }
+  .toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
 
-    .toggle .line2 {
-        opacity: 0;
-    }
+  .toggle .line2 {
+    opacity: 0;
+  }
 
-    .toggle .line3 {
-        transform: rotate(45deg) translate(-5px, -6px);
-    }
+  .toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
 }

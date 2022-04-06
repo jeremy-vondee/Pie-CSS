@@ -1,13 +1,12 @@
-.card {
+// TODO: Create a modal card
+.modal-card {
   @include card;
+  border-radius: $sizeSm;
+  text-align: center;
+  width: fit-content;
 
-  &:nth-last-child(1) {
-    align-items: flex-end;
-  }
-
-  &:hover {
-    transform: scale(1.01);
-    transition: .2s;
+  & .modal-icon {
+    margin: $sizeXs auto;
   }
 }
 

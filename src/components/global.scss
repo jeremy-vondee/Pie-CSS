@@ -1,6 +1,7 @@
 html body {
     font-family: $is-segoe-ui;
 	@include normalize;
+	overflow-y: hidden;
 }
 
 .container {

@@ -3,10 +3,9 @@
     "watch": "node ./watcher.js",
     "build:all": "yarn build:dev && yarn build:prod",
     "build:dev": "node ./build-dev.js",
-    "build:prod": "node ./build-prod.js"  
+    "build:prod": "node ./build-prod.js"
   },
   "devDependencies": {
-    "child_process": "^1.0.2",
     "chokidar": "^3.5.2",
     "colors": "^1.4.0",
     "css-loader": "^6.5.1",
@@ -34,5 +33,10 @@
     ">0.2%",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "name": "Pie-CSS",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/jeremy-vondee/Pie-CSS.git",
+  "license": "MIT"
 }
