@@ -1,26 +1,33 @@
+/*******************************************************************************************************
+********************************************************************************************************
+-------------------------------------- Back-to-top styles ----------------------------------------------
+********************************************************************************************************
+********************************************************************************************************/
+
 @import "../misc/elevation.scss";
 @import "../components/button.scss";
 
 html,
 body {
-    overflow-y: auto;
-    position: relative;
-    scroll-behavior: smooth;
+  overflow-y: auto;
+  position: relative;
+  scroll-behavior: smooth;
 }
 
 .back-home {
-    @extend .icon-btn;
-    @extend .elev-5;
-    position: fixed;
-    bottom: $sizeLg;
-    right: 0;
-    margin-right: $sizeXLg;
-    display: none;
-    width: max-content;
-    height: max-content;
-    @extend .float-right;
-    justify-content: center;
-    align-items: center;
-    vertical-align: middle;
-    padding: 4px;
+  @extend .icon-btn;
+  @extend .elev-5;
+  position: fixed;
+  bottom: $sizeLg;
+  right: 0;
+  margin-right: $sizeXLg;
+  display: none;
+  width: max-content;
+  height: max-content;
+  @extend .float-right;
+  justify-content: center;
+  align-items: center;
+  vertical-align: middle;
+  padding: 4px;
+  background: $color-dark;
 }

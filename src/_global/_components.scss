@@ -1,33 +1,30 @@
-$is-segoe-ui: 'Segoe UI';
-
 @mixin normalize {
-    outline: none;
-    border: none;
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  outline: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 @mixin button {
-    box-sizing: border-box;
-    border: hidden;
-    font-family: $is-segoe-ui;
-    background-color: $color-grey;
-    color: $color-black;
-    border-radius: $sizeXs;
-    padding: $sizeSm;
-    cursor: pointer;
-    text-decoration: none;
+  box-sizing: border-box;
+  border: hidden;
+  font-family: $primary-font;
+  background-color: $color-grey;
+  color: $color-black;
+  border-radius: $sizeXs;
+  padding: $sizeSm;
+  cursor: pointer;
+  text-decoration: none;
 }
 
 @mixin float-direction {
-    float: right;
-	margin-right: $sizeMd;
+  float: right;
+  margin-right: $sizeMd;
 }
 
 @mixin card {
-    flex-basis: calc(25% - $sizeXLg);
-    margin: $sizeMd;
-    box-shadow: $shadow-6;
+  flex-basis: calc(25% - $sizeXLg);
+  margin: $sizeMd;
+  box-shadow: $shadow-6;
 }
-

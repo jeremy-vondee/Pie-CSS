@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,28 +8,57 @@
     <title>Input</title>
     <link rel="stylesheet" href="../dist/components/index.css" />
 </head>
+
 <body>
     <div class="container">
         <form action="push">
-        <label>Username:</label>
-        <input type="text" placeholder="Username" required>
-        <label>Email:</label>
-        <input type="email" placeholder="Username" required>
-        <label>Password:</label>
-        <input type="password" placeholder="Password" required>
-        <input type="submit" class="form-button" value="Login">
-    </form>
+            <label>Username:</label>
+            <input type="text" placeholder="Enter username" required>
+            <label>Email:</label>
+            <input type="email" placeholder="Enter email" required>
+            <label>Password:</label>
+            <input type="password" placeholder="Enter password" required>
+            <input type="submit" class="form-button" value="Login">
+        </form>
     </div>
     <div class="container">
         <form action="push">
-        <label>Username:</label>
-        <input class="has-border-bottom" type="text" placeholder="Username" required>
-        <label>Email:</label>
-        <input class="has-border-bottom is-fullwidth" type="email" placeholder="Username" required>
-        <label>Password:</label>
-        <input class="has-border-bottom" type="password" placeholder="Password" required>
-        <input type="submit" class="form-button" value="Login">
-    </form>
+            <label>Username:</label>
+            <input class="has-border-bottom" name="username" type="text" placeholder="Enter username" required>
+            <label>Email:</label>
+            <input class="has-border-bottom" name="email" type="email" placeholder="Enter email" required>
+            <label>Password:</label>
+            <input class="has-border-bottom" name="password" type="password" placeholder="Enter password" required>
+            <input type="submit" class="form-button" value="Login">
+        </form>
+    </div>
+    <div class="container">
+        <input type="search" name="search" placeholder="Search" class="search-bar">
+        <Button class="search-btn">
+            <span class="material-icons">search</span>
+        </Button>
+    </div>
+    <div class="container">
+        <form action="push">
+            <label>First name</label>
+            <input type="text" name="firstName" placeholder="Enter first name">
+            <label>Last name</label>
+            <input type="text" name="firstName" placeholder="Enter first name">
+            <label>Email</label>
+            <input type="email" name="email" placeholder="Enter email">
+            <label>Phone number</label>
+            <input type="tel" name="phoneNumber" placeholder="Enter phone number">
+            <label>Subject</label>
+            <textarea name="message" placeholder="Enter message"></textarea>
+            <input type="submit" class="form-button" value="Login">
+        </form>
+    </div>
+    <div class="container">
+        <form action="push" class="news-letter">
+            <input type="email" name="email" placeholder="Enter email" required>
+            <input type="submit" class="form-button" value="Subcribe">
+        </form>
     </div>
 </body>
+
 </html>

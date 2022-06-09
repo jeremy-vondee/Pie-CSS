@@ -16,11 +16,10 @@ const sticky = () => {
   const navBar = document.querySelector("header");
 
   if (window.scrollY > 10) {
-    navBar.classList.add("sticky")
-    console.log(navBar)
+    navBar.classList.add("sticky");
   } else {
-    navBar.classList.remove("sticky")
+    navBar.classList.remove("sticky");
   }
-}
+};
 
-window.addEventListener('scroll', sticky)
+window.addEventListener("scroll", sticky);

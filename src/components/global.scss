@@ -1,19 +1,35 @@
+/*******************************************************************************************************
+********************************************************************************************************
+----------------------------------------- Global styles ------------------------------------------------
+********************************************************************************************************
+********************************************************************************************************/
+
 html body {
-    font-family: $is-segoe-ui;
-	@include normalize;
-	overflow-y: hidden;
+  font-family: $primary-font;
+  @include normalize;
+  overflow-y: hidden;
 }
 
-.container {
-	margin: 100px $sizeLg;
+main,
+section {
+  margin: 50px $sizeMd;
 }
 
 .title {
-	text-align: center;
-	font-weight: bold;
-	width: 100%;
+  font-weight: bold;
+  width: 100%;
+  margin: $sizeSm 0;
 }
 
 .is-bold {
-	font-weight: bold;
+  font-weight: bold;
+}
+
+.news-letter-section {
+  padding: $sizeSm;
+  text-align: center;
+
+  & .news-letter-content {
+    padding-bottom: $sizeXs;
+  }
 }

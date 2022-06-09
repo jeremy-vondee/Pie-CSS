@@ -1,9 +1,20 @@
+/*******************************************************************************************************
+********************************************************************************************************
+------------------------------------------ Form styles -------------------------------------------------
+---- 1. Form styles ------------------------------------------------------------------------------------
+---- 2. News letter styles -----------------------------------------------------------------------------
+---- 3. Search bar styles ------------------------------------------------------------------------------
+---- 4. Form responsiveness styles ---------------------------------------------------------------------
+********************************************************************************************************
+********************************************************************************************************/
+
 form {
-  font-family: $is-montserrat;
+  font-family: $secondary-font;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-around;
+  width: max-content;
 
   & input {
     border-radius: $sizeSm;
@@ -12,21 +23,26 @@ form {
     border: none;
     background-color: lighten($color: $color-grey, $amount: 30%);
     outline: none;
+    width: 200px;
 
     &.has-border-bottom {
       border-bottom: 1px solid $color-grey;
       background-color: $color-white;
       border-radius: 0;
-      padding-top: $sizeXs;
-      padding-bottom: $sizeXs;
-      padding-left: 0;
+      padding: $sizeXs 0;
     }
+  }
+
+  & textarea {
+    @extend input;
   }
 
   .#{&}-btn,
   .#{&}-button {
     @include button;
     margin-top: $sizeSm;
+    width: inherit;
+    vertical-align: middle;
   }
 
   label {
@@ -34,9 +50,59 @@ form {
   }
 }
 
+/********************* 2. News letter styles ********************/
+.news-letter {
+  flex-direction: row;
+
+  & input {
+    margin-top: 0;
+    border-radius: $sizeSm 0 0 $sizeSm;
+  }
+
+  .form-btn,
+  .form-button {
+    margin: 0 0 0 -1px;
+    height: 47px;
+    border-radius: 0 $sizeSm $sizeSm 0;
+  }
+
+  &.is-centered {
+    margin: 0 auto;
+  }
+}
+
 .is-fullwidth {
   width: 100%;
 }
+
+/***************** 3. Search bar styles ****************/
+.search-bar {
+  border: hidden;
+  border-radius: $sizeSm 0 0 $sizeSm;
+  background-color: lighten($color: $color-grey, $amount: 30%);
+  padding: $sizeSm 0 $sizeSm $sizeSm;
+  outline: none;
+}
+
+button.search-btn {
+  border: hidden;
+  border-radius: 0 $sizeSm $sizeSm 0;
+  height: 31px;
+  width: $sizeLg;
+  margin-left: -$sizeXs;
+  font-size: $sizeMd;
+  background-color: $color-grey;
+
+  & span {
+    vertical-align: middle;
+    height: fit-content;
+    width: fit-content;
+    font-size: inherit;
+    text-align: center;
+  }
+}
+
+/***************** 4. Form responsiveness styles ****************/
 
 @media screen and (max-width: 500px) {
   form {

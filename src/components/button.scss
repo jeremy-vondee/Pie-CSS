@@ -1,6 +1,53 @@
+/*******************************************************************************************************
+********************************************************************************************************
+----------------------------------------- Button styles ------------------------------------------------
+---- 1. Button styles ----------------------------------------------------------------------------------
+---- 2. Icon button styles -----------------------------------------------------------------------------
+---- 3. Circular button styles -------------------------------------------------------------------------
+---- 4. Social media button styles ---------------------------------------------------------------------
+---- 4. Button colors styles ---------------------------------------------------------------------------
+********************************************************************************************************
+********************************************************************************************************/
+
 .btn,
 .button {
   @include button;
+}
+
+.icon-btn,
+.icon-button {
+  @extend .button;
+  width: 50px;
+  height: 50px;
+}
+
+.is-circular {
+  @extend .icon-btn;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 50%;
+  font-size: 24px;
+  width: 24px;
+  height: 24px;
+  padding: $sizeXs;
+}
+
+.social-button {
+  @extend .button;
+  font-weight: 400;
+  font-size: $sizeMd;
+  padding: $sizeSm;
+  width: fit-content;
+  vertical-align: middle;
+  & .social-icon {
+    font-size: 16px;
+    width: 16px;
+    height: 16px;
+    margin-right: $sizeXs;
+  }
 }
 
 .is-red {
@@ -216,43 +263,6 @@
   &:hover {
     background: darken($color: $color-dark, $amount: 10%);
     color: $color-white;
-  }
-}
-
-.icon-btn,
-.icon-button {
-  @extend .button;
-  width: 50px;
-  height: 50px;
-}
-
-.is-circular {
-  @extend .icon-btn;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  vertical-align: middle;
-  border-radius: 50%;
-  padding: $sizeSm;
-}
-
-.social-button {
-  @extend .button;
-  font-weight: 400;
-  font-size: $sizeMd;
-  vertical-align: middle;
-  padding: $sizeSm;
-  & .social-icon {
-    text-align: center;
-    margin-right: $sizeSm;
-
-    & img {
-      width: 15px;
-      height: 15px;
-      margin-right: $sizeXs;
-      vertical-align: middle;
-    }
   }
 }
 

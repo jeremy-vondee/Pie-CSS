@@ -1,7 +1,16 @@
+/*******************************************************************************************************
+********************************************************************************************************
+------------------------------------------ Hero styles -------------------------------------------------
+---- 1. Hero styles ------------------------------------------------------------------------------------
+---- 2. Hero responsiveness styles ---------------------------------------------------------------------
+********************************************************************************************************
+********************************************************************************************************/
+
 .hero-banner {
   object-fit: cover;
   object-position: contain;
   position: relative;
+  font-family: $secondary-font;
 
   & img {
     width: 100%;
@@ -13,7 +22,7 @@
 
   & .hero-content {
     position: absolute;
-    top: calc(250px + 50px);
+    top: 300px;
     margin-left: $sizeXLg;
     color: $color-white;
     display: flex;
@@ -48,31 +57,42 @@
     margin-left: $sizeXLg;
   }
 }
-@media screen and (max-width: 900px) and (min-width: 401px) and (orientation: landscape) {
+
+/***************** hero responsive styles ****************/
+
+@media screen and (max-width: 900px) and (min-width: 500px) {
   .hero-banner {
     & .hero-content {
-      top: 100px;
+      top: 200px;
+
+      & .hero-header {
+        width: 400px;
+      }
+
+      & .hero-text {
+        width: 350px;
+      }
     }
+
     .hero-socials {
-      bottom: 20px;
+      bottom: 35px;
     }
   }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 499px) {
   .hero-banner {
     & .hero-content {
-      top: 200px;
-      .hero-header {
+      top: 250px;
+      margin-left: $sizeMd;
+
+      & .hero-header {
         width: 300px;
       }
-      .hero-text {
+
+      & .hero-text {
         width: 250px;
       }
-    }
-
-    & .hero-socials {
-      bottom: 15vh;
     }
   }
 }

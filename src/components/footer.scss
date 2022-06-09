@@ -1,0 +1,65 @@
+/*******************************************************************************************************
+********************************************************************************************************
+------------------------------------------ Footer styles -----------------------------------------------
+---- 1. Footer styles ----------------------------------------------------------------------------------
+---- 2. Footer responsiveness styles -------------------------------------------------------------------
+********************************************************************************************************
+********************************************************************************************************/
+
+.footer-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: $color-dark;
+
+  & .footer-address {
+    .details {
+      display: flex;
+      align-items: center;
+    }
+    .info {
+      display: flex;
+      flex-direction: column;
+
+      & .footer-title {
+        font-weight: 500;
+      }
+    }
+
+    .info:nth-child(even) {
+      margin: $sizeSm 0;
+    }
+  }
+
+  .footer-social-links,
+  .ftr-sol-links {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.legal-terms {
+  font-size: 10px;
+  text-align: center;
+  background-color: $color-dark;
+}
+
+/***************** Footer responsiveness styles ****************/
+
+@media screen and (max-width: 500px) {
+  .footer-info {
+    flex-direction: column;
+
+    .footer-social-links,
+    .ftr-sol-links,
+    .footer-address {
+      margin: $sizeSm 0;
+    }
+
+    & .footer-address {
+      .info:nth-child(even) {
+        margin: $sizeXs 0;
+      }
+    }
+  }
+}

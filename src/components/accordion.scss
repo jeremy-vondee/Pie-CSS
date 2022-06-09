@@ -1,33 +1,44 @@
-.accordion {
-    @include button;
-    width: 100%;
-    transition: 0.3s ease-out;
-    text-align: left;
-    outline: none;
-    border-radius: 0;
+/*******************************************************************************************************
+********************************************************************************************************
+--------------------------------------- Accordion styles -----------------------------------------------
+********************************************************************************************************
+********************************************************************************************************/
 
-    &::after {
-        content: '\25be';
-        float: right;
-        margin-left: $sizeSm;
-        transform: scale(2);
-    }
-    
-    &.accordion-active {
-        background-color: darken($color: $color-dark, $amount: 20%);
-        color: $color-white;
-    }
+.accordion {
+  @include button;
+  width: 100%;
+  transition: 0.3s ease-out;
+  text-align: left;
+  outline: none;
+  border-radius: 0;
+
+  &::after {
+    content: "\25be";
+    float: right;
+    margin-left: $sizeSm;
+    transform: scale(2);
+  }
+
+  &.accordion-active {
+    background-color: darken($color: $color-dark, $amount: 20%);
+    color: $color-white;
+  }
 }
 
 .accordion-content {
-    padding: 0 $sizeMd;
-    overflow: hidden;
-    max-height: 0;
-    transition: max-height 0.4s;
-    background-color: lighten($color: $color-dark, $amount: 50%);
+  padding: 0 $sizeMd;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.4s;
+  background-color: lighten($color: $color-dark, $amount: 50%);
+
+  & > span,
+  & > p {
+    padding: $sizeXs 0;
+  }
 }
 
 .accordion-active:after {
-        content: "\25b4";
-        transform: scale(2);
-    }
+  content: "\25b4";
+  transform: scale(2);
+}
